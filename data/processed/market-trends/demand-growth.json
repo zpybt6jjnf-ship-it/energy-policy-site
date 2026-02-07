@@ -1,0 +1,45 @@
+{
+  "id": "M3",
+  "title": "Electricity Demand Growth Drivers",
+  "source": {
+    "agency": "U.S. Energy Information Administration",
+    "dataset": "Annual Energy Outlook 2024 / Short-Term Energy Outlook",
+    "url": "https://www.eia.gov/outlooks/aeo/",
+    "accessDate": "2025-02-25",
+    "vintage": "AEO 2024 Reference Case"
+  },
+  "units": {
+    "demand": "Terawatt-hours (TWh)"
+  },
+  "caveats": [
+    "Historical values (2010-2023) represent actual electricity sales/generation. Projected values (2024-2030) are from EIA's Reference Case scenario.",
+    "Projections are subject to significant uncertainty. Actual outcomes depend on economic growth, technology adoption rates, and policy changes.",
+    "Data center demand growth projections vary widely across forecasters. EIA's estimates may differ substantially from industry projections.",
+    "EV adoption trajectory depends on policy incentives, charging infrastructure deployment, and consumer preferences.",
+    "Electrification of heating and industrial processes depends on relative energy prices and equipment turnover rates."
+  ],
+  "lastUpdated": "2025-02-25",
+  "data": [
+    { "year": 2010, "historical": true, "baselineDemand": 3886 },
+    { "year": 2011, "historical": true, "baselineDemand": 3883 },
+    { "year": 2012, "historical": true, "baselineDemand": 3832 },
+    { "year": 2013, "historical": true, "baselineDemand": 3869 },
+    { "year": 2014, "historical": true, "baselineDemand": 3903 },
+    { "year": 2015, "historical": true, "baselineDemand": 3900 },
+    { "year": 2016, "historical": true, "baselineDemand": 3902 },
+    { "year": 2017, "historical": true, "baselineDemand": 3864 },
+    { "year": 2018, "historical": true, "baselineDemand": 3946 },
+    { "year": 2019, "historical": true, "baselineDemand": 3955 },
+    { "year": 2020, "historical": true, "baselineDemand": 3802 },
+    { "year": 2021, "historical": true, "baselineDemand": 3930 },
+    { "year": 2022, "historical": true, "baselineDemand": 3985 },
+    { "year": 2023, "historical": true, "baselineDemand": 4010 },
+    { "year": 2024, "historical": false, "baselineDemand": 3920, "dataCenters": 100, "evs": 25, "electrification": 15, "onshoring": 10 },
+    { "year": 2025, "historical": false, "baselineDemand": 3935, "dataCenters": 145, "evs": 40, "electrification": 25, "onshoring": 18 },
+    { "year": 2026, "historical": false, "baselineDemand": 3950, "dataCenters": 200, "evs": 60, "electrification": 38, "onshoring": 28 },
+    { "year": 2027, "historical": false, "baselineDemand": 3965, "dataCenters": 270, "evs": 85, "electrification": 52, "onshoring": 38 },
+    { "year": 2028, "historical": false, "baselineDemand": 3980, "dataCenters": 350, "evs": 115, "electrification": 68, "onshoring": 50 },
+    { "year": 2029, "historical": false, "baselineDemand": 3995, "dataCenters": 440, "evs": 150, "electrification": 85, "onshoring": 62 },
+    { "year": 2030, "historical": false, "baselineDemand": 4010, "dataCenters": 540, "evs": 190, "electrification": 105, "onshoring": 75 }
+  ]
+}

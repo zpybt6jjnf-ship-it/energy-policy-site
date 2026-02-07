@@ -1,0 +1,49 @@
+{
+  "id": "L2",
+  "title": "Cumulative Land Committed to Energy Infrastructure by Source",
+  "source": {
+    "agency": "U.S. Department of Energy / National Renewable Energy Laboratory",
+    "dataset": "Land Use by Electricity Generation Technology (NREL Technical Report)",
+    "url": "https://www.nrel.gov/analysis/land-use.html",
+    "accessDate": "2025-02-15",
+    "vintage": "2024"
+  },
+  "units": {
+    "land": "Thousand acres"
+  },
+  "caveats": [
+    "Land use estimates combine direct footprint (generation facility, access roads) and total area (including spacing for wind turbines).",
+    "Wind farm land between turbines is often co-used for agriculture, which this metric does not capture.",
+    "Hydro includes reservoir surface area, which provides other services (flood control, recreation, water supply).",
+    "Estimates are cumulative and include retired facilities that still occupy land.",
+    "Rooftop solar is excluded as it does not consume additional land."
+  ],
+  "lastUpdated": "2025-02-15",
+  "data": [
+    { "year": 2000, "solar": 5, "wind": 30, "nuclear": 120, "naturalGas": 95, "coal": 320, "hydro": 4800 },
+    { "year": 2001, "solar": 5, "wind": 45, "nuclear": 120, "naturalGas": 100, "coal": 320, "hydro": 4800 },
+    { "year": 2002, "solar": 6, "wind": 60, "nuclear": 120, "naturalGas": 108, "coal": 318, "hydro": 4800 },
+    { "year": 2003, "solar": 6, "wind": 75, "nuclear": 120, "naturalGas": 115, "coal": 316, "hydro": 4800 },
+    { "year": 2004, "solar": 7, "wind": 95, "nuclear": 120, "naturalGas": 122, "coal": 314, "hydro": 4800 },
+    { "year": 2005, "solar": 8, "wind": 130, "nuclear": 120, "naturalGas": 130, "coal": 312, "hydro": 4800 },
+    { "year": 2006, "solar": 9, "wind": 165, "nuclear": 120, "naturalGas": 138, "coal": 310, "hydro": 4800 },
+    { "year": 2007, "solar": 11, "wind": 220, "nuclear": 120, "naturalGas": 145, "coal": 308, "hydro": 4800 },
+    { "year": 2008, "solar": 14, "wind": 310, "nuclear": 120, "naturalGas": 152, "coal": 306, "hydro": 4800 },
+    { "year": 2009, "solar": 18, "wind": 430, "nuclear": 120, "naturalGas": 158, "coal": 304, "hydro": 4800 },
+    { "year": 2010, "solar": 25, "wind": 530, "nuclear": 120, "naturalGas": 165, "coal": 302, "hydro": 4800 },
+    { "year": 2011, "solar": 40, "wind": 620, "nuclear": 120, "naturalGas": 172, "coal": 298, "hydro": 4800 },
+    { "year": 2012, "solar": 65, "wind": 780, "nuclear": 120, "naturalGas": 180, "coal": 294, "hydro": 4800 },
+    { "year": 2013, "solar": 100, "wind": 840, "nuclear": 120, "naturalGas": 188, "coal": 290, "hydro": 4800 },
+    { "year": 2014, "solar": 150, "wind": 920, "nuclear": 120, "naturalGas": 195, "coal": 286, "hydro": 4800 },
+    { "year": 2015, "solar": 220, "wind": 1020, "nuclear": 120, "naturalGas": 202, "coal": 280, "hydro": 4800 },
+    { "year": 2016, "solar": 320, "wind": 1130, "nuclear": 120, "naturalGas": 210, "coal": 274, "hydro": 4800 },
+    { "year": 2017, "solar": 430, "wind": 1250, "nuclear": 120, "naturalGas": 218, "coal": 268, "hydro": 4800 },
+    { "year": 2018, "solar": 560, "wind": 1380, "nuclear": 120, "naturalGas": 225, "coal": 262, "hydro": 4800 },
+    { "year": 2019, "solar": 700, "wind": 1520, "nuclear": 120, "naturalGas": 232, "coal": 255, "hydro": 4800 },
+    { "year": 2020, "solar": 880, "wind": 1700, "nuclear": 118, "naturalGas": 240, "coal": 248, "hydro": 4800 },
+    { "year": 2021, "solar": 1100, "wind": 1900, "nuclear": 116, "naturalGas": 248, "coal": 240, "hydro": 4800 },
+    { "year": 2022, "solar": 1380, "wind": 2080, "nuclear": 114, "naturalGas": 255, "coal": 232, "hydro": 4800 },
+    { "year": 2023, "solar": 1700, "wind": 2250, "nuclear": 114, "naturalGas": 262, "coal": 224, "hydro": 4800 },
+    { "year": 2024, "solar": 2100, "wind": 2420, "nuclear": 114, "naturalGas": 270, "coal": 216, "hydro": 4800 }
+  ]
+}

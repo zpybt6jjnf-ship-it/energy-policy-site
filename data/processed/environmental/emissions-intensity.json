@@ -1,0 +1,49 @@
+{
+  "id": "E2",
+  "title": "Emissions Intensity (CO2/MWh) by Region",
+  "source": {
+    "agency": "U.S. Environmental Protection Agency",
+    "dataset": "Emissions & Generation Resource Integrated Database (eGRID)",
+    "url": "https://www.epa.gov/egrid",
+    "accessDate": "2025-02-10",
+    "vintage": "eGRID2022 (2022 data)"
+  },
+  "units": {
+    "intensity": "Pounds CO2 per megawatt-hour (lbs CO2/MWh)"
+  },
+  "caveats": [
+    "Intensity reflects the carbon content of the fuel mix in each subregion.",
+    "Regions with high hydro or nuclear shares have very low intensity; coal-heavy regions have high intensity.",
+    "eGRID subregions do not precisely align with state boundaries.",
+    "Prior intensity values (where available) are from eGRID2018 (2018 data) for comparison."
+  ],
+  "lastUpdated": "2025-02-10",
+  "data": [
+    { "region": "WECC Northwest", "regionCode": "NWPP", "intensity": 585, "priorIntensity": 680 },
+    { "region": "WECC California", "regionCode": "CAMX", "intensity": 495, "priorIntensity": 550 },
+    { "region": "WECC Southwest", "regionCode": "AZNM", "intensity": 810, "priorIntensity": 920 },
+    { "region": "WECC Rockies", "regionCode": "RMPA", "intensity": 1120, "priorIntensity": 1280 },
+    { "region": "ERCOT", "regionCode": "ERCT", "intensity": 855, "priorIntensity": 920 },
+    { "region": "SPP North", "regionCode": "SPNO", "intensity": 985, "priorIntensity": 1150 },
+    { "region": "SPP South", "regionCode": "SPSO", "intensity": 920, "priorIntensity": 1050 },
+    { "region": "MISO North", "regionCode": "MROE", "intensity": 1210, "priorIntensity": 1380 },
+    { "region": "MISO Central", "regionCode": "RFCM", "intensity": 1085, "priorIntensity": 1250 },
+    { "region": "MISO South", "regionCode": "SRMV", "intensity": 780, "priorIntensity": 880 },
+    { "region": "PJM East", "regionCode": "RFCE", "intensity": 680, "priorIntensity": 750 },
+    { "region": "PJM West", "regionCode": "RFCW", "intensity": 1050, "priorIntensity": 1200 },
+    { "region": "SERC Virginia/Carolina", "regionCode": "SRVC", "intensity": 625, "priorIntensity": 720 },
+    { "region": "SERC Southeast", "regionCode": "SRMG", "intensity": 840, "priorIntensity": 950 },
+    { "region": "SERC Tennessee Valley", "regionCode": "SRTV", "intensity": 755, "priorIntensity": 870 },
+    { "region": "Florida", "regionCode": "FRCC", "intensity": 830, "priorIntensity": 900 },
+    { "region": "ISO New England", "regionCode": "NEWE", "intensity": 510, "priorIntensity": 560 },
+    { "region": "NYISO Upstate", "regionCode": "NYUP", "intensity": 305, "priorIntensity": 350 },
+    { "region": "NYISO NYC/Westchester", "regionCode": "NYCW", "intensity": 590, "priorIntensity": 650 },
+    { "region": "NYISO Long Island", "regionCode": "NYLI", "intensity": 1010, "priorIntensity": 1100 },
+    { "region": "Upper Midwest", "regionCode": "MROW", "intensity": 1150, "priorIntensity": 1320 },
+    { "region": "Hawaii", "regionCode": "HIMS", "intensity": 1350, "priorIntensity": 1400 },
+    { "region": "Alaska", "regionCode": "AKGD", "intensity": 960, "priorIntensity": 1020 },
+    { "region": "WECC Basin", "regionCode": "NWBS", "intensity": 745, "priorIntensity": 850 },
+    { "region": "SERC Central", "regionCode": "SRSO", "intensity": 720, "priorIntensity": 830 },
+    { "region": "SERC Gateway", "regionCode": "SRMW", "intensity": 1240, "priorIntensity": 1400 }
+  ]
+}

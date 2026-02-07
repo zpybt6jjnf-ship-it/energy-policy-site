@@ -1,0 +1,50 @@
+{
+  "id": "E1",
+  "title": "Power Sector CO2 Emissions Trajectory",
+  "source": {
+    "agency": "U.S. Energy Information Administration / U.S. Environmental Protection Agency",
+    "dataset": "EIA CO2 Emissions from Energy Consumption / EPA Greenhouse Gas Inventory",
+    "url": "https://www.eia.gov/environment/emissions/carbon/",
+    "accessDate": "2025-02-20",
+    "vintage": "2024"
+  },
+  "units": {
+    "totalMmt": "Million metric tons CO2",
+    "perCapitaTons": "Metric tons CO2 per capita"
+  },
+  "caveats": [
+    "Covers CO2 emissions from electricity generation only (not total energy-sector or economy-wide emissions).",
+    "Per-capita values use Census Bureau mid-year population estimates.",
+    "Emissions accounting follows EIA's combustion-based methodology. Life-cycle emissions are not included."
+  ],
+  "lastUpdated": "2025-02-20",
+  "data": [
+    { "year": 1990, "totalMmt": 1820, "perCapitaTons": 7.28 },
+    { "year": 1995, "totalMmt": 1946, "perCapitaTons": 7.35 },
+    { "year": 2000, "totalMmt": 2296, "perCapitaTons": 8.15 },
+    { "year": 2001, "totalMmt": 2253, "perCapitaTons": 7.91 },
+    { "year": 2002, "totalMmt": 2269, "perCapitaTons": 7.88 },
+    { "year": 2003, "totalMmt": 2310, "perCapitaTons": 7.94 },
+    { "year": 2004, "totalMmt": 2342, "perCapitaTons": 7.97 },
+    { "year": 2005, "totalMmt": 2400, "perCapitaTons": 8.09 },
+    { "year": 2006, "totalMmt": 2346, "perCapitaTons": 7.83 },
+    { "year": 2007, "totalMmt": 2397, "perCapitaTons": 7.93 },
+    { "year": 2008, "totalMmt": 2360, "perCapitaTons": 7.73 },
+    { "year": 2009, "totalMmt": 2116, "perCapitaTons": 6.88 },
+    { "year": 2010, "totalMmt": 2259, "perCapitaTons": 7.29 },
+    { "year": 2011, "totalMmt": 2158, "perCapitaTons": 6.92 },
+    { "year": 2012, "totalMmt": 2022, "perCapitaTons": 6.44 },
+    { "year": 2013, "totalMmt": 2053, "perCapitaTons": 6.49 },
+    { "year": 2014, "totalMmt": 2039, "perCapitaTons": 6.39 },
+    { "year": 2015, "totalMmt": 1901, "perCapitaTons": 5.91 },
+    { "year": 2016, "totalMmt": 1810, "perCapitaTons": 5.59 },
+    { "year": 2017, "totalMmt": 1740, "perCapitaTons": 5.33 },
+    { "year": 2018, "totalMmt": 1755, "perCapitaTons": 5.35 },
+    { "year": 2019, "totalMmt": 1620, "perCapitaTons": 4.91 },
+    { "year": 2020, "totalMmt": 1440, "perCapitaTons": 4.35 },
+    { "year": 2021, "totalMmt": 1545, "perCapitaTons": 4.64 },
+    { "year": 2022, "totalMmt": 1510, "perCapitaTons": 4.51 },
+    { "year": 2023, "totalMmt": 1380, "perCapitaTons": 4.10 },
+    { "year": 2024, "totalMmt": 1340, "perCapitaTons": 3.96 }
+  ]
+}

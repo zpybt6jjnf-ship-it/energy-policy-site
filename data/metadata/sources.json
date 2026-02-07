@@ -1,0 +1,121 @@
+{
+  "sources": [
+    {
+      "id": "eia-861",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "Form EIA-861",
+      "description": "Annual Electric Power Industry Report - distribution reliability (SAIDI/SAIFI)",
+      "url": "https://www.eia.gov/electricity/data/eia861/",
+      "frequency": "Annual",
+      "usedIn": ["R1"]
+    },
+    {
+      "id": "nerc-ltra",
+      "agency": "North American Electric Reliability Corporation",
+      "dataset": "Long-Term Reliability Assessment",
+      "description": "Planning reserve margins and resource adequacy projections by assessment area",
+      "url": "https://www.nerc.com/pa/RAPA/ra/Pages/default.aspx",
+      "frequency": "Annual",
+      "usedIn": ["R2"]
+    },
+    {
+      "id": "doe-oe417",
+      "agency": "U.S. Department of Energy",
+      "dataset": "Electric Disturbance Events (OE-417)",
+      "description": "Mandatory reports of major electric disturbances and unusual occurrences",
+      "url": "https://www.oe.netl.doe.gov/OE417_annual_summary.aspx",
+      "frequency": "Continuous (annual summaries)",
+      "usedIn": ["R3"]
+    },
+    {
+      "id": "eia-retail-prices",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "Electric Power Monthly, Table 5.6.A",
+      "description": "Average retail price of electricity by state and sector",
+      "url": "https://www.eia.gov/electricity/monthly/epm_table_5_6_a.html",
+      "frequency": "Monthly",
+      "usedIn": ["A1", "A2", "M1"]
+    },
+    {
+      "id": "bls-cpi",
+      "agency": "U.S. Bureau of Labor Statistics",
+      "dataset": "Consumer Price Index (CPI-U)",
+      "description": "Consumer price indices and household expenditure survey data",
+      "url": "https://www.bls.gov/cpi/",
+      "frequency": "Monthly (CPI), Annual (CE Survey)",
+      "usedIn": ["A1", "A3"]
+    },
+    {
+      "id": "eia-mer",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "Monthly Energy Review",
+      "description": "Comprehensive monthly energy statistics including generation by source",
+      "url": "https://www.eia.gov/totalenergy/data/monthly/",
+      "frequency": "Monthly",
+      "usedIn": ["G1"]
+    },
+    {
+      "id": "eia-860",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "Form EIA-860",
+      "description": "Annual Electric Generator Report - capacity additions and retirements",
+      "url": "https://www.eia.gov/electricity/data/eia860/",
+      "frequency": "Annual",
+      "usedIn": ["G2"]
+    },
+    {
+      "id": "epa-egrid",
+      "agency": "U.S. Environmental Protection Agency",
+      "dataset": "eGRID (Emissions & Generation Resource Integrated Database)",
+      "description": "Plant-level and regional emissions and generation data",
+      "url": "https://www.epa.gov/egrid",
+      "frequency": "Annual (with ~2 year lag)",
+      "usedIn": ["G3", "E2"]
+    },
+    {
+      "id": "eia-co2",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "CO2 Emissions from Energy Consumption",
+      "description": "Sector-level CO2 emissions from fossil fuel combustion",
+      "url": "https://www.eia.gov/environment/emissions/carbon/",
+      "frequency": "Annual",
+      "usedIn": ["E1"]
+    },
+    {
+      "id": "epa-campd",
+      "agency": "U.S. Environmental Protection Agency",
+      "dataset": "Clean Air Markets Program Data (CAMPD)",
+      "description": "SO2 and NOx emissions from power plants under cap-and-trade programs",
+      "url": "https://campd.epa.gov/",
+      "frequency": "Continuous (annual summaries)",
+      "usedIn": ["E3"]
+    },
+    {
+      "id": "eia-henry-hub",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "Henry Hub Natural Gas Spot Price",
+      "description": "Benchmark U.S. natural gas pricing",
+      "url": "https://www.eia.gov/dnav/ng/hist/rngwhhdA.htm",
+      "frequency": "Daily/Monthly/Annual",
+      "usedIn": ["M1"]
+    },
+    {
+      "id": "eia-aeo-lcoe",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "Annual Energy Outlook - Levelized Costs",
+      "description": "Projected levelized costs for new generation resources",
+      "url": "https://www.eia.gov/outlooks/aeo/electricity_generation/",
+      "frequency": "Annual",
+      "usedIn": ["M2"]
+    },
+    {
+      "id": "eia-aeo-demand",
+      "agency": "U.S. Energy Information Administration",
+      "dataset": "Annual Energy Outlook - Reference Case",
+      "description": "Electricity demand projections and growth scenarios",
+      "url": "https://www.eia.gov/outlooks/aeo/",
+      "frequency": "Annual",
+      "usedIn": ["M3"]
+    }
+  ]
+}

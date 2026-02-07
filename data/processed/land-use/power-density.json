@@ -1,0 +1,33 @@
+{
+  "id": "L3",
+  "title": "Power Density by Generation Technology",
+  "source": {
+    "agency": "U.S. Department of Energy / National Renewable Energy Laboratory",
+    "dataset": "Land-Use Requirements for Solar Power Plants in the United States & Wind Energy Land Use Synthesis",
+    "url": "https://www.nrel.gov/analysis/land-use.html",
+    "accessDate": "2025-02-15",
+    "vintage": "2024"
+  },
+  "units": {
+    "powerDensity": "Watts per square meter (W/m²)"
+  },
+  "caveats": [
+    "Power density = average generation divided by total land area used. Higher is more land-efficient.",
+    "Wind power density uses total lease area including spacing; direct footprint is much smaller.",
+    "Solar values represent utility-scale ground-mounted installations; rooftop solar uses no additional land.",
+    "Nuclear and fossil values include the power plant, fuel handling, and buffer zones but not mining/extraction land.",
+    "Ranges reflect variation across sites, technologies, and capacity factors.",
+    "Hydro values vary enormously depending on reservoir size relative to dam capacity."
+  ],
+  "lastUpdated": "2025-02-15",
+  "data": [
+    { "technology": "Nuclear", "wattsPerSqMeter": 240.0, "rangeMin": 120.0, "rangeMax": 500.0 },
+    { "technology": "Natural Gas (CC)", "wattsPerSqMeter": 180.0, "rangeMin": 100.0, "rangeMax": 350.0 },
+    { "technology": "Coal", "wattsPerSqMeter": 135.0, "rangeMin": 60.0, "rangeMax": 250.0 },
+    { "technology": "Geothermal", "wattsPerSqMeter": 35.0, "rangeMin": 15.0, "rangeMax": 80.0 },
+    { "technology": "Solar PV (utility)", "wattsPerSqMeter": 5.8, "rangeMin": 3.5, "rangeMax": 10.0 },
+    { "technology": "Solar CSP", "wattsPerSqMeter": 4.2, "rangeMin": 2.5, "rangeMax": 7.0 },
+    { "technology": "Wind", "wattsPerSqMeter": 1.9, "rangeMin": 0.5, "rangeMax": 5.0 },
+    { "technology": "Hydroelectric", "wattsPerSqMeter": 1.0, "rangeMin": 0.1, "rangeMax": 50.0 }
+  ]
+}

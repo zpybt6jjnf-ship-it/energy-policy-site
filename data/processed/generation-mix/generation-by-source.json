@@ -1,0 +1,50 @@
+{
+  "id": "G1",
+  "title": "U.S. Electricity Generation by Source",
+  "source": {
+    "agency": "U.S. Energy Information Administration",
+    "dataset": "Monthly Energy Review, Table 7.2a",
+    "url": "https://www.eia.gov/totalenergy/data/monthly/#electricity",
+    "accessDate": "2025-03-01",
+    "vintage": "2024"
+  },
+  "units": {
+    "generation": "Terawatt-hours (TWh)"
+  },
+  "caveats": [
+    "Values represent net generation (gross generation minus station use).",
+    "'Other' includes biomass, geothermal, and other minor sources.",
+    "Solar includes both utility-scale and estimated small-scale (rooftop) generation where reported.",
+    "Historical values may be revised as EIA updates its data series."
+  ],
+  "lastUpdated": "2025-03-01",
+  "data": [
+    { "year": 1990, "coal": 1594, "naturalGas": 373, "nuclear": 577, "wind": 3, "solar": 1, "hydro": 280, "petroleum": 117, "other": 70 },
+    { "year": 1995, "coal": 1653, "naturalGas": 496, "nuclear": 674, "wind": 3, "solar": 1, "hydro": 311, "petroleum": 67, "other": 75 },
+    { "year": 2000, "coal": 1966, "naturalGas": 601, "nuclear": 754, "wind": 6, "solar": 1, "hydro": 270, "petroleum": 111, "other": 79 },
+    { "year": 2001, "coal": 1904, "naturalGas": 639, "nuclear": 769, "wind": 7, "solar": 1, "hydro": 217, "petroleum": 125, "other": 68 },
+    { "year": 2002, "coal": 1933, "naturalGas": 691, "nuclear": 780, "wind": 10, "solar": 1, "hydro": 264, "petroleum": 95, "other": 72 },
+    { "year": 2003, "coal": 1974, "naturalGas": 650, "nuclear": 764, "wind": 11, "solar": 1, "hydro": 276, "petroleum": 119, "other": 74 },
+    { "year": 2004, "coal": 1978, "naturalGas": 710, "nuclear": 789, "wind": 14, "solar": 1, "hydro": 268, "petroleum": 121, "other": 76 },
+    { "year": 2005, "coal": 2013, "naturalGas": 757, "nuclear": 782, "wind": 18, "solar": 1, "hydro": 270, "petroleum": 122, "other": 78 },
+    { "year": 2006, "coal": 1991, "naturalGas": 813, "nuclear": 787, "wind": 27, "solar": 1, "hydro": 289, "petroleum": 64, "other": 80 },
+    { "year": 2007, "coal": 2016, "naturalGas": 897, "nuclear": 806, "wind": 34, "solar": 1, "hydro": 248, "petroleum": 65, "other": 82 },
+    { "year": 2008, "coal": 1986, "naturalGas": 883, "nuclear": 806, "wind": 55, "solar": 2, "hydro": 254, "petroleum": 46, "other": 83 },
+    { "year": 2009, "coal": 1756, "naturalGas": 921, "nuclear": 799, "wind": 74, "solar": 3, "hydro": 273, "petroleum": 39, "other": 85 },
+    { "year": 2010, "coal": 1847, "naturalGas": 988, "nuclear": 807, "wind": 95, "solar": 4, "hydro": 260, "petroleum": 37, "other": 87 },
+    { "year": 2011, "coal": 1733, "naturalGas": 1014, "nuclear": 790, "wind": 120, "solar": 6, "hydro": 325, "petroleum": 30, "other": 88 },
+    { "year": 2012, "coal": 1514, "naturalGas": 1237, "nuclear": 769, "wind": 140, "solar": 10, "hydro": 277, "petroleum": 23, "other": 89 },
+    { "year": 2013, "coal": 1585, "naturalGas": 1124, "nuclear": 789, "wind": 168, "solar": 16, "hydro": 269, "petroleum": 27, "other": 90 },
+    { "year": 2014, "coal": 1582, "naturalGas": 1127, "nuclear": 797, "wind": 182, "solar": 26, "hydro": 259, "petroleum": 28, "other": 91 },
+    { "year": 2015, "coal": 1356, "naturalGas": 1333, "nuclear": 797, "wind": 191, "solar": 39, "hydro": 249, "petroleum": 28, "other": 92 },
+    { "year": 2016, "coal": 1239, "naturalGas": 1379, "nuclear": 805, "wind": 227, "solar": 56, "hydro": 267, "petroleum": 24, "other": 93 },
+    { "year": 2017, "coal": 1206, "naturalGas": 1296, "nuclear": 805, "wind": 254, "solar": 77, "hydro": 300, "petroleum": 21, "other": 94 },
+    { "year": 2018, "coal": 1146, "naturalGas": 1468, "nuclear": 807, "wind": 275, "solar": 96, "hydro": 292, "petroleum": 22, "other": 95 },
+    { "year": 2019, "coal": 966, "naturalGas": 1582, "nuclear": 809, "wind": 300, "solar": 108, "hydro": 274, "petroleum": 18, "other": 96 },
+    { "year": 2020, "coal": 773, "naturalGas": 1617, "nuclear": 790, "wind": 338, "solar": 130, "hydro": 285, "petroleum": 15, "other": 97 },
+    { "year": 2021, "coal": 899, "naturalGas": 1575, "nuclear": 778, "wind": 380, "solar": 163, "hydro": 260, "petroleum": 17, "other": 98 },
+    { "year": 2022, "coal": 830, "naturalGas": 1688, "nuclear": 772, "wind": 434, "solar": 211, "hydro": 252, "petroleum": 16, "other": 99 },
+    { "year": 2023, "coal": 675, "naturalGas": 1740, "nuclear": 775, "wind": 425, "solar": 241, "hydro": 262, "petroleum": 14, "other": 100 },
+    { "year": 2024, "coal": 620, "naturalGas": 1785, "nuclear": 780, "wind": 460, "solar": 290, "hydro": 270, "petroleum": 12, "other": 102 }
+  ]
+}

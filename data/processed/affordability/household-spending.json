@@ -1,0 +1,45 @@
+{
+  "id": "A3",
+  "title": "Electricity as Share of Household Spending",
+  "source": {
+    "agency": "U.S. Bureau of Labor Statistics",
+    "dataset": "Consumer Price Index (CPI-U) and Consumer Expenditure Survey",
+    "url": "https://www.bls.gov/cpi/",
+    "accessDate": "2025-02-15",
+    "vintage": "2023"
+  },
+  "units": {
+    "electricityShare": "Percent of total household expenditure",
+    "cpiElectricity": "CPI-U index (1982-84 = 100)",
+    "cpiAllItems": "CPI-U index (1982-84 = 100)"
+  },
+  "caveats": [
+    "Electricity spending share based on Consumer Expenditure Survey annual data.",
+    "CPI electricity index reflects price changes; actual household spending also depends on usage patterns.",
+    "Lower-income households typically spend a higher percentage of income on electricity (energy burden)."
+  ],
+  "lastUpdated": "2025-02-15",
+  "data": [
+    { "year": 2003, "electricityShare": 1.68, "cpiElectricity": 132.5, "cpiAllItems": 184.0 },
+    { "year": 2004, "electricityShare": 1.65, "cpiElectricity": 134.8, "cpiAllItems": 188.9 },
+    { "year": 2005, "electricityShare": 1.72, "cpiElectricity": 141.2, "cpiAllItems": 195.3 },
+    { "year": 2006, "electricityShare": 1.82, "cpiElectricity": 152.6, "cpiAllItems": 201.6 },
+    { "year": 2007, "electricityShare": 1.78, "cpiElectricity": 157.8, "cpiAllItems": 207.3 },
+    { "year": 2008, "electricityShare": 1.85, "cpiElectricity": 165.4, "cpiAllItems": 215.3 },
+    { "year": 2009, "electricityShare": 1.80, "cpiElectricity": 167.2, "cpiAllItems": 214.5 },
+    { "year": 2010, "electricityShare": 1.76, "cpiElectricity": 168.5, "cpiAllItems": 218.1 },
+    { "year": 2011, "electricityShare": 1.74, "cpiElectricity": 172.1, "cpiAllItems": 224.9 },
+    { "year": 2012, "electricityShare": 1.68, "cpiElectricity": 173.0, "cpiAllItems": 229.6 },
+    { "year": 2013, "electricityShare": 1.66, "cpiElectricity": 175.8, "cpiAllItems": 233.0 },
+    { "year": 2014, "electricityShare": 1.64, "cpiElectricity": 179.2, "cpiAllItems": 236.7 },
+    { "year": 2015, "electricityShare": 1.58, "cpiElectricity": 178.5, "cpiAllItems": 237.0 },
+    { "year": 2016, "electricityShare": 1.52, "cpiElectricity": 177.8, "cpiAllItems": 240.0 },
+    { "year": 2017, "electricityShare": 1.48, "cpiElectricity": 181.2, "cpiAllItems": 245.1 },
+    { "year": 2018, "electricityShare": 1.45, "cpiElectricity": 184.6, "cpiAllItems": 251.1 },
+    { "year": 2019, "electricityShare": 1.42, "cpiElectricity": 186.3, "cpiAllItems": 255.7 },
+    { "year": 2020, "electricityShare": 1.55, "cpiElectricity": 187.8, "cpiAllItems": 258.8 },
+    { "year": 2021, "electricityShare": 1.48, "cpiElectricity": 195.5, "cpiAllItems": 270.9 },
+    { "year": 2022, "electricityShare": 1.58, "cpiElectricity": 219.8, "cpiAllItems": 292.7 },
+    { "year": 2023, "electricityShare": 1.55, "cpiElectricity": 228.5, "cpiAllItems": 304.7 }
+  ]
+}

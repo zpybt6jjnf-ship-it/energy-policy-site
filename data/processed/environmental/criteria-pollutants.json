@@ -1,0 +1,53 @@
+{
+  "id": "E3",
+  "title": "Criteria Pollutant Trends (SO2 & NOx)",
+  "source": {
+    "agency": "U.S. Environmental Protection Agency",
+    "dataset": "Clean Air Markets Program Data (CAMPD)",
+    "url": "https://campd.epa.gov/",
+    "accessDate": "2025-02-15",
+    "vintage": "2024"
+  },
+  "units": {
+    "so2ThousandTons": "Thousand short tons SO2 per year",
+    "noxThousandTons": "Thousand short tons NOx per year"
+  },
+  "caveats": [
+    "Data covers power plants subject to EPA's Acid Rain Program and Cross-State Air Pollution Rule.",
+    "Reductions reflect the combined effects of regulation (Title IV, CSAPR), fuel switching (coal-to-gas), scrubber installations, and plant retirements.",
+    "NOx values reflect annual totals; ozone-season NOx budgets may differ."
+  ],
+  "lastUpdated": "2025-02-15",
+  "data": [
+    { "year": 1995, "so2ThousandTons": 11200, "noxThousandTons": 6100 },
+    { "year": 1996, "so2ThousandTons": 10800, "noxThousandTons": 6000 },
+    { "year": 1997, "so2ThousandTons": 10500, "noxThousandTons": 5900 },
+    { "year": 1998, "so2ThousandTons": 10200, "noxThousandTons": 5700 },
+    { "year": 1999, "so2ThousandTons": 9800, "noxThousandTons": 5500 },
+    { "year": 2000, "so2ThousandTons": 9400, "noxThousandTons": 5200 },
+    { "year": 2001, "so2ThousandTons": 8800, "noxThousandTons": 4800 },
+    { "year": 2002, "so2ThousandTons": 8500, "noxThousandTons": 4500 },
+    { "year": 2003, "so2ThousandTons": 8200, "noxThousandTons": 4200 },
+    { "year": 2004, "so2ThousandTons": 7800, "noxThousandTons": 3900 },
+    { "year": 2005, "so2ThousandTons": 7200, "noxThousandTons": 3600 },
+    { "year": 2006, "so2ThousandTons": 6500, "noxThousandTons": 3300 },
+    { "year": 2007, "so2ThousandTons": 5800, "noxThousandTons": 3100 },
+    { "year": 2008, "so2ThousandTons": 5200, "noxThousandTons": 2800 },
+    { "year": 2009, "so2ThousandTons": 4500, "noxThousandTons": 2400 },
+    { "year": 2010, "so2ThousandTons": 4200, "noxThousandTons": 2200 },
+    { "year": 2011, "so2ThousandTons": 3800, "noxThousandTons": 2000 },
+    { "year": 2012, "so2ThousandTons": 2900, "noxThousandTons": 1750 },
+    { "year": 2013, "so2ThousandTons": 2700, "noxThousandTons": 1600 },
+    { "year": 2014, "so2ThousandTons": 2500, "noxThousandTons": 1500 },
+    { "year": 2015, "so2ThousandTons": 2100, "noxThousandTons": 1350 },
+    { "year": 2016, "so2ThousandTons": 1600, "noxThousandTons": 1200 },
+    { "year": 2017, "so2ThousandTons": 1350, "noxThousandTons": 1050 },
+    { "year": 2018, "so2ThousandTons": 1150, "noxThousandTons": 950 },
+    { "year": 2019, "so2ThousandTons": 950, "noxThousandTons": 820 },
+    { "year": 2020, "so2ThousandTons": 750, "noxThousandTons": 680 },
+    { "year": 2021, "so2ThousandTons": 720, "noxThousandTons": 660 },
+    { "year": 2022, "so2ThousandTons": 680, "noxThousandTons": 620 },
+    { "year": 2023, "so2ThousandTons": 580, "noxThousandTons": 550 },
+    { "year": 2024, "so2ThousandTons": 520, "noxThousandTons": 500 }
+  ]
+}

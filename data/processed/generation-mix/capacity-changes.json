@@ -1,0 +1,46 @@
+{
+  "id": "G2",
+  "title": "Capacity Additions & Retirements by Fuel",
+  "source": {
+    "agency": "U.S. Energy Information Administration",
+    "dataset": "Form EIA-860, Annual Electric Generator Report",
+    "url": "https://www.eia.gov/electricity/data/eia860/",
+    "accessDate": "2025-02-20",
+    "vintage": "2024"
+  },
+  "units": {
+    "capacity": "Gigawatts (GW) of nameplate capacity"
+  },
+  "caveats": [
+    "Additions represent new generators entering service. Retirements represent generators permanently removed from service.",
+    "Nameplate capacity does not reflect capacity factor differences between technologies.",
+    "Some planned retirements may be deferred; planned additions may be delayed or cancelled.",
+    "'Other' includes biomass, geothermal, battery storage, and other technologies."
+  ],
+  "lastUpdated": "2025-02-20",
+  "data": [
+    { "year": 2002, "additions": { "coal": 1.2, "naturalGas": 52.1, "nuclear": 0, "wind": 0.4, "solar": 0, "other": 0.8 }, "retirements": { "coal": 0.5, "naturalGas": 0.3, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.2 } },
+    { "year": 2003, "additions": { "coal": 1.5, "naturalGas": 47.8, "nuclear": 0, "wind": 0.7, "solar": 0, "other": 0.6 }, "retirements": { "coal": 0.8, "naturalGas": 0.4, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2004, "additions": { "coal": 1.0, "naturalGas": 19.5, "nuclear": 0, "wind": 0.4, "solar": 0, "other": 0.5 }, "retirements": { "coal": 1.0, "naturalGas": 0.5, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.2 } },
+    { "year": 2005, "additions": { "coal": 1.8, "naturalGas": 16.2, "nuclear": 0, "wind": 2.4, "solar": 0, "other": 0.4 }, "retirements": { "coal": 1.2, "naturalGas": 0.6, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2006, "additions": { "coal": 1.5, "naturalGas": 10.1, "nuclear": 0, "wind": 2.5, "solar": 0.1, "other": 0.5 }, "retirements": { "coal": 1.5, "naturalGas": 0.7, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.2 } },
+    { "year": 2007, "additions": { "coal": 1.4, "naturalGas": 10.8, "nuclear": 0, "wind": 5.3, "solar": 0.1, "other": 0.6 }, "retirements": { "coal": 1.8, "naturalGas": 0.8, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2008, "additions": { "coal": 1.2, "naturalGas": 9.5, "nuclear": 0, "wind": 8.4, "solar": 0.2, "other": 0.5 }, "retirements": { "coal": 2.0, "naturalGas": 1.0, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.2 } },
+    { "year": 2009, "additions": { "coal": 0.8, "naturalGas": 5.2, "nuclear": 0, "wind": 10.0, "solar": 0.3, "other": 0.4 }, "retirements": { "coal": 2.5, "naturalGas": 1.2, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2010, "additions": { "coal": 0.6, "naturalGas": 6.4, "nuclear": 0, "wind": 5.1, "solar": 0.5, "other": 0.5 }, "retirements": { "coal": 3.0, "naturalGas": 1.5, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.2 } },
+    { "year": 2011, "additions": { "coal": 0.4, "naturalGas": 9.3, "nuclear": 0, "wind": 6.8, "solar": 1.0, "other": 0.6 }, "retirements": { "coal": 4.5, "naturalGas": 1.8, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2012, "additions": { "coal": 0.2, "naturalGas": 10.2, "nuclear": 0, "wind": 13.0, "solar": 2.0, "other": 0.5 }, "retirements": { "coal": 8.5, "naturalGas": 2.0, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.4 } },
+    { "year": 2013, "additions": { "coal": 0.1, "naturalGas": 5.5, "nuclear": 0, "wind": 1.1, "solar": 3.5, "other": 0.6 }, "retirements": { "coal": 5.2, "naturalGas": 1.5, "nuclear": 0.6, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2014, "additions": { "coal": 0, "naturalGas": 7.8, "nuclear": 0, "wind": 4.9, "solar": 5.2, "other": 0.8 }, "retirements": { "coal": 4.8, "naturalGas": 1.2, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.2 } },
+    { "year": 2015, "additions": { "coal": 0, "naturalGas": 6.5, "nuclear": 1.1, "wind": 8.1, "solar": 6.2, "other": 1.0 }, "retirements": { "coal": 13.5, "naturalGas": 1.8, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2016, "additions": { "coal": 0, "naturalGas": 8.3, "nuclear": 0, "wind": 8.2, "solar": 7.5, "other": 1.2 }, "retirements": { "coal": 8.2, "naturalGas": 2.5, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.4 } },
+    { "year": 2017, "additions": { "coal": 0, "naturalGas": 11.2, "nuclear": 0, "wind": 6.3, "solar": 5.5, "other": 1.5 }, "retirements": { "coal": 7.5, "naturalGas": 2.8, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2018, "additions": { "coal": 0, "naturalGas": 13.0, "nuclear": 1.1, "wind": 7.6, "solar": 6.1, "other": 2.0 }, "retirements": { "coal": 11.2, "naturalGas": 3.0, "nuclear": 0.8, "wind": 0, "solar": 0, "other": 0.4 } },
+    { "year": 2019, "additions": { "coal": 0, "naturalGas": 7.5, "nuclear": 0, "wind": 9.1, "solar": 5.3, "other": 2.5 }, "retirements": { "coal": 9.0, "naturalGas": 2.5, "nuclear": 1.0, "wind": 0, "solar": 0, "other": 0.3 } },
+    { "year": 2020, "additions": { "coal": 0, "naturalGas": 5.8, "nuclear": 0, "wind": 14.2, "solar": 10.5, "other": 3.5 }, "retirements": { "coal": 8.5, "naturalGas": 3.2, "nuclear": 1.0, "wind": 0, "solar": 0, "other": 0.5 } },
+    { "year": 2021, "additions": { "coal": 0, "naturalGas": 4.2, "nuclear": 0, "wind": 13.5, "solar": 15.2, "other": 5.0 }, "retirements": { "coal": 6.8, "naturalGas": 2.8, "nuclear": 1.0, "wind": 0, "solar": 0, "other": 0.4 } },
+    { "year": 2022, "additions": { "coal": 0, "naturalGas": 5.5, "nuclear": 0, "wind": 9.5, "solar": 18.5, "other": 7.0 }, "retirements": { "coal": 10.2, "naturalGas": 3.5, "nuclear": 0, "wind": 0, "solar": 0, "other": 0.5 } },
+    { "year": 2023, "additions": { "coal": 0, "naturalGas": 3.8, "nuclear": 0, "wind": 6.2, "solar": 22.0, "other": 9.5 }, "retirements": { "coal": 8.5, "naturalGas": 2.5, "nuclear": 0, "wind": 0.2, "solar": 0, "other": 0.3 } },
+    { "year": 2024, "additions": { "coal": 0, "naturalGas": 4.5, "nuclear": 0, "wind": 8.0, "solar": 28.0, "other": 12.0 }, "retirements": { "coal": 7.2, "naturalGas": 2.8, "nuclear": 0.8, "wind": 0.3, "solar": 0, "other": 0.4 } }
+  ]
+}

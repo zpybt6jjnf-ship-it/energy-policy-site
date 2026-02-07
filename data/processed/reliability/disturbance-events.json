@@ -1,0 +1,48 @@
+{
+  "id": "R3",
+  "title": "Major Electric Disturbance Events",
+  "source": {
+    "agency": "U.S. Department of Energy, Office of Electricity",
+    "dataset": "Electric Disturbance Events (OE-417)",
+    "url": "https://www.oe.netl.doe.gov/OE417_annual_summary.aspx",
+    "accessDate": "2025-02-15",
+    "vintage": "2024"
+  },
+  "units": {
+    "events": "Number of reported events per year"
+  },
+  "caveats": [
+    "OE-417 reporting thresholds and categories have evolved over time. Direct year-to-year comparisons should account for these changes.",
+    "Reporting became more comprehensive after 2011. Pre-2011 totals may undercount actual events.",
+    "Cyber incidents may be underreported due to classification or disclosure concerns.",
+    "'Other' includes islanding, public appeal, load shedding, and miscellaneous causes."
+  ],
+  "lastUpdated": "2025-02-15",
+  "data": [
+    { "year": 2000, "weather": 28, "equipment": 15, "cyber": 0, "physical": 2, "fuelSupply": 3, "other": 8 },
+    { "year": 2001, "weather": 32, "equipment": 18, "cyber": 0, "physical": 1, "fuelSupply": 5, "other": 10 },
+    { "year": 2002, "weather": 35, "equipment": 16, "cyber": 0, "physical": 2, "fuelSupply": 4, "other": 9 },
+    { "year": 2003, "weather": 58, "equipment": 22, "cyber": 0, "physical": 3, "fuelSupply": 5, "other": 14 },
+    { "year": 2004, "weather": 45, "equipment": 20, "cyber": 0, "physical": 2, "fuelSupply": 4, "other": 11 },
+    { "year": 2005, "weather": 62, "equipment": 19, "cyber": 0, "physical": 3, "fuelSupply": 6, "other": 12 },
+    { "year": 2006, "weather": 40, "equipment": 21, "cyber": 0, "physical": 2, "fuelSupply": 5, "other": 10 },
+    { "year": 2007, "weather": 48, "equipment": 23, "cyber": 0, "physical": 4, "fuelSupply": 5, "other": 13 },
+    { "year": 2008, "weather": 55, "equipment": 25, "cyber": 1, "physical": 3, "fuelSupply": 7, "other": 14 },
+    { "year": 2009, "weather": 42, "equipment": 22, "cyber": 1, "physical": 3, "fuelSupply": 4, "other": 11 },
+    { "year": 2010, "weather": 50, "equipment": 24, "cyber": 2, "physical": 4, "fuelSupply": 5, "other": 12 },
+    { "year": 2011, "weather": 65, "equipment": 30, "cyber": 3, "physical": 5, "fuelSupply": 6, "other": 18 },
+    { "year": 2012, "weather": 78, "equipment": 32, "cyber": 4, "physical": 6, "fuelSupply": 7, "other": 20 },
+    { "year": 2013, "weather": 70, "equipment": 28, "cyber": 5, "physical": 8, "fuelSupply": 5, "other": 16 },
+    { "year": 2014, "weather": 72, "equipment": 30, "cyber": 6, "physical": 7, "fuelSupply": 8, "other": 18 },
+    { "year": 2015, "weather": 68, "equipment": 27, "cyber": 8, "physical": 9, "fuelSupply": 6, "other": 15 },
+    { "year": 2016, "weather": 75, "equipment": 29, "cyber": 10, "physical": 8, "fuelSupply": 7, "other": 17 },
+    { "year": 2017, "weather": 95, "equipment": 31, "cyber": 12, "physical": 10, "fuelSupply": 9, "other": 19 },
+    { "year": 2018, "weather": 88, "equipment": 33, "cyber": 14, "physical": 11, "fuelSupply": 8, "other": 21 },
+    { "year": 2019, "weather": 82, "equipment": 30, "cyber": 16, "physical": 9, "fuelSupply": 7, "other": 18 },
+    { "year": 2020, "weather": 105, "equipment": 35, "cyber": 18, "physical": 12, "fuelSupply": 10, "other": 22 },
+    { "year": 2021, "weather": 120, "equipment": 38, "cyber": 22, "physical": 14, "fuelSupply": 15, "other": 25 },
+    { "year": 2022, "weather": 115, "equipment": 36, "cyber": 25, "physical": 16, "fuelSupply": 12, "other": 23 },
+    { "year": 2023, "weather": 125, "equipment": 40, "cyber": 28, "physical": 18, "fuelSupply": 13, "other": 26 },
+    { "year": 2024, "weather": 130, "equipment": 42, "cyber": 32, "physical": 20, "fuelSupply": 14, "other": 28 }
+  ]
+}

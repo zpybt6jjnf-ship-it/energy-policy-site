@@ -1,0 +1,36 @@
+{
+  "id": "R1",
+  "title": "Distribution System Reliability (SAIDI/SAIFI)",
+  "source": {
+    "agency": "U.S. Energy Information Administration",
+    "dataset": "Form EIA-861, Annual Electric Power Industry Report",
+    "url": "https://www.eia.gov/electricity/data/eia861/",
+    "accessDate": "2025-03-15",
+    "vintage": "2024"
+  },
+  "units": {
+    "saidi": "Minutes per customer per year",
+    "saifi": "Interruptions per customer per year"
+  },
+  "caveats": [
+    "SAIDI = System Average Interruption Duration Index; SAIFI = System Average Interruption Frequency Index.",
+    "Major Event Days (MED) are defined using IEEE Standard 1366 (2.5-beta methodology). Including MEDs captures severe weather impacts; excluding MEDs shows baseline grid performance.",
+    "Data reflects distribution-level outages reported by utilities to EIA. Transmission-level events are not fully captured.",
+    "Reporting population has expanded over time, which may affect trend comparisons."
+  ],
+  "lastUpdated": "2025-03-15",
+  "data": [
+    { "year": 2013, "saidiWithMed": 244, "saidiWithoutMed": 118, "saifiWithMed": 1.24, "saifiWithoutMed": 1.05 },
+    { "year": 2014, "saidiWithMed": 267, "saidiWithoutMed": 112, "saifiWithMed": 1.30, "saifiWithoutMed": 1.02 },
+    { "year": 2015, "saidiWithMed": 250, "saidiWithoutMed": 115, "saifiWithMed": 1.26, "saifiWithoutMed": 1.04 },
+    { "year": 2016, "saidiWithMed": 275, "saidiWithoutMed": 119, "saifiWithMed": 1.32, "saifiWithoutMed": 1.06 },
+    { "year": 2017, "saidiWithMed": 470, "saidiWithoutMed": 120, "saifiWithMed": 1.55, "saifiWithoutMed": 1.07 },
+    { "year": 2018, "saidiWithMed": 360, "saidiWithoutMed": 122, "saifiWithMed": 1.41, "saifiWithoutMed": 1.08 },
+    { "year": 2019, "saidiWithMed": 295, "saidiWithoutMed": 125, "saifiWithMed": 1.33, "saifiWithoutMed": 1.09 },
+    { "year": 2020, "saidiWithMed": 480, "saidiWithoutMed": 127, "saifiWithMed": 1.58, "saifiWithoutMed": 1.11 },
+    { "year": 2021, "saidiWithMed": 540, "saidiWithoutMed": 130, "saifiWithMed": 1.64, "saifiWithoutMed": 1.12 },
+    { "year": 2022, "saidiWithMed": 510, "saidiWithoutMed": 132, "saifiWithMed": 1.60, "saifiWithoutMed": 1.14 },
+    { "year": 2023, "saidiWithMed": 530, "saidiWithoutMed": 135, "saifiWithMed": 1.62, "saifiWithoutMed": 1.15 },
+    { "year": 2024, "saidiWithMed": 550, "saidiWithoutMed": 138, "saifiWithMed": 1.65, "saifiWithoutMed": 1.16 }
+  ]
+}

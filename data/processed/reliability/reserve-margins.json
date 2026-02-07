@@ -1,0 +1,118 @@
+{
+  "id": "R2",
+  "title": "Planning Reserve Margins by Region",
+  "source": {
+    "agency": "North American Electric Reliability Corporation",
+    "dataset": "Long-Term Reliability Assessment (LTRA)",
+    "url": "https://www.nerc.com/pa/RAPA/ra/Pages/default.aspx",
+    "accessDate": "2025-02-01",
+    "vintage": "2024"
+  },
+  "units": {
+    "margin": "Percent above anticipated peak demand"
+  },
+  "caveats": [
+    "Reference margin levels vary by region based on resource mix and interconnection characteristics.",
+    "Anticipated reserve margins may differ from actual due to demand forecast uncertainty and resource availability.",
+    "NERC's assessment areas do not precisely align with RTO/ISO boundaries."
+  ],
+  "lastUpdated": "2025-02-01",
+  "data": [
+    {
+      "region": "MISO",
+      "currentMargin": 18.2,
+      "forecastMargins": [
+        { "year": 2025, "margin": 16.5 },
+        { "year": 2026, "margin": 14.8 },
+        { "year": 2027, "margin": 13.2 },
+        { "year": 2028, "margin": 12.1 },
+        { "year": 2029, "margin": 11.5 }
+      ],
+      "referenceLevel": 15.0
+    },
+    {
+      "region": "ERCOT",
+      "currentMargin": 15.8,
+      "forecastMargins": [
+        { "year": 2025, "margin": 14.2 },
+        { "year": 2026, "margin": 12.9 },
+        { "year": 2027, "margin": 11.3 },
+        { "year": 2028, "margin": 10.1 },
+        { "year": 2029, "margin": 9.5 }
+      ],
+      "referenceLevel": 13.75
+    },
+    {
+      "region": "PJM",
+      "currentMargin": 20.4,
+      "forecastMargins": [
+        { "year": 2025, "margin": 19.1 },
+        { "year": 2026, "margin": 17.8 },
+        { "year": 2027, "margin": 16.2 },
+        { "year": 2028, "margin": 15.0 },
+        { "year": 2029, "margin": 14.5 }
+      ],
+      "referenceLevel": 14.7
+    },
+    {
+      "region": "SPP",
+      "currentMargin": 22.1,
+      "forecastMargins": [
+        { "year": 2025, "margin": 20.5 },
+        { "year": 2026, "margin": 18.8 },
+        { "year": 2027, "margin": 17.1 },
+        { "year": 2028, "margin": 15.9 },
+        { "year": 2029, "margin": 15.2 }
+      ],
+      "referenceLevel": 15.0
+    },
+    {
+      "region": "WECC-SW",
+      "currentMargin": 16.5,
+      "forecastMargins": [
+        { "year": 2025, "margin": 14.9 },
+        { "year": 2026, "margin": 13.4 },
+        { "year": 2027, "margin": 12.0 },
+        { "year": 2028, "margin": 11.2 },
+        { "year": 2029, "margin": 10.8 }
+      ],
+      "referenceLevel": 14.0
+    },
+    {
+      "region": "ISO-NE",
+      "currentMargin": 14.1,
+      "forecastMargins": [
+        { "year": 2025, "margin": 12.8 },
+        { "year": 2026, "margin": 11.5 },
+        { "year": 2027, "margin": 10.9 },
+        { "year": 2028, "margin": 10.2 },
+        { "year": 2029, "margin": 9.8 }
+      ],
+      "referenceLevel": 12.7
+    },
+    {
+      "region": "NYISO",
+      "currentMargin": 19.3,
+      "forecastMargins": [
+        { "year": 2025, "margin": 18.0 },
+        { "year": 2026, "margin": 16.8 },
+        { "year": 2027, "margin": 15.5 },
+        { "year": 2028, "margin": 14.6 },
+        { "year": 2029, "margin": 14.0 }
+      ],
+      "referenceLevel": 15.0
+    },
+    {
+      "region": "SERC",
+      "currentMargin": 23.5,
+      "forecastMargins": [
+        { "year": 2025, "margin": 22.0 },
+        { "year": 2026, "margin": 20.5 },
+        { "year": 2027, "margin": 19.2 },
+        { "year": 2028, "margin": 18.1 },
+        { "year": 2029, "margin": 17.5 }
+      ],
+      "referenceLevel": 15.0
+    }
+  ]
+}

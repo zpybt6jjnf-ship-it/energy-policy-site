@@ -1,0 +1,47 @@
+{
+  "id": "A1",
+  "title": "Retail Electricity Price Trends by Sector",
+  "source": {
+    "agency": "U.S. Energy Information Administration",
+    "dataset": "Electric Power Monthly, Table 5.6.A",
+    "url": "https://www.eia.gov/electricity/monthly/epm_table_5_6_a.html",
+    "accessDate": "2025-03-01",
+    "vintage": "2024"
+  },
+  "units": {
+    "price": "Cents per kilowatt-hour (nominal)",
+    "priceReal": "Cents per kilowatt-hour (2024 dollars)"
+  },
+  "caveats": [
+    "Prices are revenue-weighted averages across all utilities. Actual customer bills vary significantly by utility, rate structure, and usage level.",
+    "Real (inflation-adjusted) values use BLS CPI-U (All Urban Consumers). Base year: 2024.",
+    "Transportation sector electricity prices are less stable due to the small and evolving customer base."
+  ],
+  "lastUpdated": "2025-03-01",
+  "data": [
+    { "year": 2001, "residential": 8.58, "commercial": 7.92, "industrial": 5.05, "allSectors": 7.29, "residentialReal": 14.52, "commercialReal": 13.40, "industrialReal": 8.54, "allSectorsReal": 12.33 },
+    { "year": 2002, "residential": 8.44, "commercial": 7.89, "industrial": 4.88, "allSectors": 7.20, "residentialReal": 14.07, "commercialReal": 13.15, "industrialReal": 8.13, "allSectorsReal": 12.00 },
+    { "year": 2003, "residential": 8.72, "commercial": 8.03, "industrial": 5.11, "allSectors": 7.44, "residentialReal": 14.21, "commercialReal": 13.09, "industrialReal": 8.33, "allSectorsReal": 12.13 },
+    { "year": 2004, "residential": 8.95, "commercial": 8.17, "industrial": 5.25, "allSectors": 7.61, "residentialReal": 14.20, "commercialReal": 12.96, "industrialReal": 8.33, "allSectorsReal": 12.07 },
+    { "year": 2005, "residential": 9.45, "commercial": 8.67, "industrial": 5.73, "allSectors": 8.14, "residentialReal": 14.50, "commercialReal": 13.31, "industrialReal": 8.79, "allSectorsReal": 12.49 },
+    { "year": 2006, "residential": 10.40, "commercial": 9.46, "industrial": 6.16, "allSectors": 8.90, "residentialReal": 15.46, "commercialReal": 14.07, "industrialReal": 9.16, "allSectorsReal": 13.23 },
+    { "year": 2007, "residential": 10.65, "commercial": 9.65, "industrial": 6.39, "allSectors": 9.13, "residentialReal": 15.39, "commercialReal": 13.95, "industrialReal": 9.23, "allSectorsReal": 13.19 },
+    { "year": 2008, "residential": 11.26, "commercial": 10.36, "industrial": 6.83, "allSectors": 9.74, "residentialReal": 15.68, "commercialReal": 14.43, "industrialReal": 9.51, "allSectorsReal": 13.57 },
+    { "year": 2009, "residential": 11.51, "commercial": 10.16, "industrial": 6.83, "allSectors": 9.82, "residentialReal": 16.08, "commercialReal": 14.20, "industrialReal": 9.54, "allSectorsReal": 13.72 },
+    { "year": 2010, "residential": 11.54, "commercial": 10.19, "industrial": 6.77, "allSectors": 9.83, "residentialReal": 15.85, "commercialReal": 13.99, "industrialReal": 9.30, "allSectorsReal": 13.50 },
+    { "year": 2011, "residential": 11.72, "commercial": 10.24, "industrial": 6.82, "allSectors": 9.90, "residentialReal": 15.61, "commercialReal": 13.64, "industrialReal": 9.08, "allSectorsReal": 13.19 },
+    { "year": 2012, "residential": 11.88, "commercial": 10.09, "industrial": 6.67, "allSectors": 9.84, "residentialReal": 15.49, "commercialReal": 13.16, "industrialReal": 8.70, "allSectorsReal": 12.83 },
+    { "year": 2013, "residential": 12.13, "commercial": 10.26, "industrial": 6.89, "allSectors": 10.07, "residentialReal": 15.57, "commercialReal": 13.17, "industrialReal": 8.84, "allSectorsReal": 12.93 },
+    { "year": 2014, "residential": 12.52, "commercial": 10.74, "industrial": 7.10, "allSectors": 10.44, "residentialReal": 15.82, "commercialReal": 13.57, "industrialReal": 8.97, "allSectorsReal": 13.19 },
+    { "year": 2015, "residential": 12.65, "commercial": 10.59, "industrial": 6.91, "allSectors": 10.41, "residentialReal": 15.92, "commercialReal": 13.33, "industrialReal": 8.69, "allSectorsReal": 13.10 },
+    { "year": 2016, "residential": 12.55, "commercial": 10.52, "industrial": 6.76, "allSectors": 10.27, "residentialReal": 15.54, "commercialReal": 13.02, "industrialReal": 8.37, "allSectorsReal": 12.72 },
+    { "year": 2017, "residential": 12.89, "commercial": 10.66, "industrial": 6.88, "allSectors": 10.48, "residentialReal": 15.61, "commercialReal": 12.91, "industrialReal": 8.33, "allSectorsReal": 12.69 },
+    { "year": 2018, "residential": 12.87, "commercial": 10.67, "industrial": 6.92, "allSectors": 10.53, "residentialReal": 15.17, "commercialReal": 12.58, "industrialReal": 8.16, "allSectorsReal": 12.42 },
+    { "year": 2019, "residential": 13.01, "commercial": 10.68, "industrial": 6.81, "allSectors": 10.54, "residentialReal": 15.06, "commercialReal": 12.37, "industrialReal": 7.88, "allSectorsReal": 12.20 },
+    { "year": 2020, "residential": 13.15, "commercial": 10.66, "industrial": 6.67, "allSectors": 10.59, "residentialReal": 14.96, "commercialReal": 12.12, "industrialReal": 7.59, "allSectorsReal": 12.05 },
+    { "year": 2021, "residential": 13.72, "commercial": 11.18, "industrial": 7.18, "allSectors": 11.10, "residentialReal": 14.97, "commercialReal": 12.20, "industrialReal": 7.83, "allSectorsReal": 12.11 },
+    { "year": 2022, "residential": 15.12, "commercial": 12.55, "industrial": 8.45, "allSectors": 12.49, "residentialReal": 15.46, "commercialReal": 12.83, "industrialReal": 8.64, "allSectorsReal": 12.77 },
+    { "year": 2023, "residential": 15.85, "commercial": 13.01, "industrial": 8.32, "allSectors": 12.75, "residentialReal": 15.85, "commercialReal": 13.01, "industrialReal": 8.32, "allSectorsReal": 12.75 },
+    { "year": 2024, "residential": 16.20, "commercial": 13.35, "industrial": 8.55, "allSectors": 13.10, "residentialReal": 16.20, "commercialReal": 13.35, "industrialReal": 8.55, "allSectorsReal": 13.10 }
+  ]
+}

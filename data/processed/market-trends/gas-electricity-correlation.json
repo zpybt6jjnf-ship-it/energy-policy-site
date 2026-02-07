@@ -1,0 +1,48 @@
+{
+  "id": "M1",
+  "title": "Natural Gas & Electricity Price Correlation",
+  "source": {
+    "agency": "U.S. Energy Information Administration",
+    "dataset": "Henry Hub Natural Gas Spot Price / Electric Power Monthly",
+    "url": "https://www.eia.gov/dnav/ng/hist/rngwhhdA.htm",
+    "accessDate": "2025-03-01",
+    "vintage": "2024"
+  },
+  "units": {
+    "henryHub": "Dollars per million BTU ($/MMBtu)",
+    "retailElectricity": "Cents per kilowatt-hour (¢/kWh)"
+  },
+  "caveats": [
+    "Henry Hub is the benchmark U.S. natural gas spot price but does not reflect regional basis differentials.",
+    "Electricity prices lag gas price movements due to contract structures and rate case timing.",
+    "The gas-electricity price relationship is strongest in regions where gas sets the marginal generation cost.",
+    "Other factors (renewables penetration, coal retirement pace, demand growth) also influence electricity prices."
+  ],
+  "lastUpdated": "2025-03-01",
+  "data": [
+    { "year": 2001, "henryHub": 4.07, "retailElectricity": 7.29 },
+    { "year": 2002, "henryHub": 3.33, "retailElectricity": 7.20 },
+    { "year": 2003, "henryHub": 5.47, "retailElectricity": 7.44 },
+    { "year": 2004, "henryHub": 5.85, "retailElectricity": 7.61 },
+    { "year": 2005, "henryHub": 8.69, "retailElectricity": 8.14 },
+    { "year": 2006, "henryHub": 6.72, "retailElectricity": 8.90 },
+    { "year": 2007, "henryHub": 6.97, "retailElectricity": 9.13 },
+    { "year": 2008, "henryHub": 8.86, "retailElectricity": 9.74 },
+    { "year": 2009, "henryHub": 3.94, "retailElectricity": 9.82 },
+    { "year": 2010, "henryHub": 4.37, "retailElectricity": 9.83 },
+    { "year": 2011, "henryHub": 4.00, "retailElectricity": 9.90 },
+    { "year": 2012, "henryHub": 2.75, "retailElectricity": 9.84 },
+    { "year": 2013, "henryHub": 3.73, "retailElectricity": 10.07 },
+    { "year": 2014, "henryHub": 4.37, "retailElectricity": 10.44 },
+    { "year": 2015, "henryHub": 2.62, "retailElectricity": 10.41 },
+    { "year": 2016, "henryHub": 2.52, "retailElectricity": 10.27 },
+    { "year": 2017, "henryHub": 2.99, "retailElectricity": 10.48 },
+    { "year": 2018, "henryHub": 3.15, "retailElectricity": 10.53 },
+    { "year": 2019, "henryHub": 2.56, "retailElectricity": 10.54 },
+    { "year": 2020, "henryHub": 2.03, "retailElectricity": 10.59 },
+    { "year": 2021, "henryHub": 3.89, "retailElectricity": 11.10 },
+    { "year": 2022, "henryHub": 6.45, "retailElectricity": 12.49 },
+    { "year": 2023, "henryHub": 2.54, "retailElectricity": 12.75 },
+    { "year": 2024, "henryHub": 2.28, "retailElectricity": 13.10 }
+  ]
+}

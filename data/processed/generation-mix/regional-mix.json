@@ -1,0 +1,31 @@
+{
+  "id": "G3",
+  "title": "Regional Generation Mix Comparison",
+  "source": {
+    "agency": "U.S. Environmental Protection Agency",
+    "dataset": "Emissions & Generation Resource Integrated Database (eGRID)",
+    "url": "https://www.epa.gov/egrid",
+    "accessDate": "2025-02-10",
+    "vintage": "eGRID2022 (2022 data)"
+  },
+  "units": {
+    "share": "Percent of total generation by source"
+  },
+  "caveats": [
+    "Shares are based on net generation within each NERC region / ISO territory.",
+    "Regions with high hydro or nuclear shares may have very different emissions profiles than their overall fuel mix suggests.",
+    "Data reflects 2022 generation year; subsequent plant retirements or additions may have altered the mix."
+  ],
+  "lastUpdated": "2025-02-10",
+  "data": [
+    { "region": "ERCOT (Texas)", "coal": 16.0, "naturalGas": 49.0, "nuclear": 10.5, "wind": 17.5, "solar": 5.0, "hydro": 0.2, "other": 1.8 },
+    { "region": "PJM (Mid-Atlantic)", "coal": 20.5, "naturalGas": 38.0, "nuclear": 31.0, "wind": 4.5, "solar": 2.5, "hydro": 1.5, "other": 2.0 },
+    { "region": "MISO (Midwest)", "coal": 30.0, "naturalGas": 28.0, "nuclear": 15.0, "wind": 18.0, "solar": 2.5, "hydro": 3.0, "other": 3.5 },
+    { "region": "ISO-NE (New England)", "coal": 0.5, "naturalGas": 52.0, "nuclear": 26.0, "wind": 5.5, "solar": 7.0, "hydro": 6.5, "other": 2.5 },
+    { "region": "NYISO (New York)", "coal": 0.5, "naturalGas": 38.0, "nuclear": 26.5, "wind": 5.0, "solar": 4.0, "hydro": 22.0, "other": 4.0 },
+    { "region": "CAISO (California)", "coal": 0.2, "naturalGas": 37.0, "nuclear": 8.5, "wind": 7.0, "solar": 25.0, "hydro": 12.0, "other": 10.3 },
+    { "region": "SPP (Great Plains)", "coal": 25.0, "naturalGas": 27.0, "nuclear": 6.0, "wind": 36.0, "solar": 2.0, "hydro": 2.5, "other": 1.5 },
+    { "region": "SERC (Southeast)", "coal": 18.0, "naturalGas": 42.0, "nuclear": 25.0, "wind": 1.5, "solar": 5.0, "hydro": 5.5, "other": 3.0 },
+    { "region": "WECC-NW (Pacific NW)", "coal": 8.0, "naturalGas": 15.0, "nuclear": 4.0, "wind": 12.0, "solar": 3.0, "hydro": 52.0, "other": 6.0 }
+  ]
+}

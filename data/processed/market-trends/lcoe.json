@@ -1,0 +1,34 @@
+{
+  "id": "M2",
+  "title": "Levelized Cost of Energy by Technology",
+  "source": {
+    "agency": "U.S. Energy Information Administration",
+    "dataset": "Annual Energy Outlook, Levelized Costs of New Generation Resources",
+    "url": "https://www.eia.gov/outlooks/aeo/electricity_generation/",
+    "accessDate": "2025-02-25",
+    "vintage": "AEO 2024"
+  },
+  "units": {
+    "cost": "2023 dollars per megawatt-hour ($/MWh)"
+  },
+  "caveats": [
+    "LCOE reflects the estimated revenue required to build and operate a new plant over its financial life.",
+    "LCOE does not capture integration costs (transmission, storage, balancing) for variable resources or value differences by dispatch profile.",
+    "EIA AEO LCOE assumes plants enter service in the projection year (2030 for current AEO). Technology costs and performance assumptions evolve between vintages.",
+    "Private estimates (Lazard, BNEF) exist and may differ due to different assumptions about cost of capital, capacity factors, and policy incentives.",
+    "Values do not include tax credits or subsidies unless noted."
+  ],
+  "lastUpdated": "2025-02-25",
+  "data": [
+    { "technology": "Solar PV (utility-scale)", "vintage2015": 84, "vintage2020": 40, "vintageCurrent": 29, "unit": "$/MWh" },
+    { "technology": "Onshore Wind", "vintage2015": 65, "vintage2020": 37, "vintageCurrent": 33, "unit": "$/MWh" },
+    { "technology": "Offshore Wind", "vintage2015": 197, "vintage2020": 122, "vintageCurrent": 92, "unit": "$/MWh" },
+    { "technology": "Combined Cycle Gas", "vintage2015": 56, "vintage2020": 38, "vintageCurrent": 40, "unit": "$/MWh" },
+    { "technology": "Combustion Turbine Gas", "vintage2015": 95, "vintage2020": 68, "vintageCurrent": 72, "unit": "$/MWh" },
+    { "technology": "Nuclear (advanced)", "vintage2015": 95, "vintage2020": 82, "vintageCurrent": 88, "unit": "$/MWh" },
+    { "technology": "Coal (new)", "vintage2015": 95, "vintage2020": 76, "vintageCurrent": 82, "unit": "$/MWh" },
+    { "technology": "Battery Storage (4-hr)", "vintage2015": null, "vintage2020": 140, "vintageCurrent": 62, "unit": "$/MWh" },
+    { "technology": "Geothermal", "vintage2015": 48, "vintage2020": 40, "vintageCurrent": 37, "unit": "$/MWh" },
+    { "technology": "Hydroelectric", "vintage2015": 84, "vintage2020": 63, "vintageCurrent": 61, "unit": "$/MWh" }
+  ]
+}

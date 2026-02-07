@@ -5,9 +5,11 @@ import { CATEGORY_META } from "@/lib/constants";
 import ChartContainer from "@/components/charts/ChartContainer";
 import AnalysisBlock from "@/components/charts/AnalysisBlock";
 import MethodologyNote from "@/components/charts/MethodologyNote";
-import GenerationBySourceChart from "@/components/charts/generation-mix/GenerationBySourceChart";
-import CapacityChangesChart from "@/components/charts/generation-mix/CapacityChangesChart";
-import RegionalMixChart from "@/components/charts/generation-mix/RegionalMixChart";
+import dynamic from "next/dynamic";
+
+const GenerationBySourceChart = dynamic(() => import("@/components/charts/generation-mix/GenerationBySourceChart"), { ssr: false });
+const CapacityChangesChart = dynamic(() => import("@/components/charts/generation-mix/CapacityChangesChart"), { ssr: false });
+const RegionalMixChart = dynamic(() => import("@/components/charts/generation-mix/RegionalMixChart"), { ssr: false });
 import type {
   DataEnvelope,
   GenerationBySourcePoint,
@@ -39,10 +41,18 @@ export default function GenerationMixPage() {
       <div className="space-y-16">
         {/* G1: Generation by Source */}
         <ChartContainer
+          staggerIndex={0}
           id="generation-by-source"
           title="U.S. Electricity Generation by Source"
           source={generation.source}
           chartAriaLabel="Stacked area chart showing U.S. electricity generation by fuel source from 1990 to 2024, measured in terawatt-hours."
+          description="Coal generation has fallen from roughly 1,800 TWh in 1990 to about 600 TWh in 2024. Natural gas has risen to become the largest source at about 1,700 TWh. Wind and solar have grown from near zero to a combined 24% of generation."
+          keyFinding={{ stat: "24%", description: "Wind + solar share of total U.S. generation in 2024" }}
+          dataTable={{
+            caption: "U.S. electricity generation by source in TWh",
+            headers: ["Year", "Coal", "Gas", "Nuclear", "Wind", "Solar", "Hydro", "Petroleum", "Other"],
+            rows: generation.data.map((d) => [d.year, d.coal, d.naturalGas, d.nuclear, d.wind, d.solar, d.hydro, d.petroleum, d.other]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -99,10 +109,18 @@ export default function GenerationMixPage() {
 
         {/* G2: Capacity Changes */}
         <ChartContainer
+          staggerIndex={1}
           id="capacity-changes"
           title="Capacity Additions & Retirements by Fuel"
           source={capacity.source}
           chartAriaLabel="Diverging bar chart showing nameplate capacity additions above the zero line and retirements below the zero line, by fuel type, from 2002 to 2024."
+          description="Solar PV additions have grown to over 30 GW per year by 2024. Wind additions peaked around 2020. Coal retirements have been the largest source of capacity loss, with major waves in 2012, 2015, and 2018. Battery storage is a rapidly growing category."
+          keyFinding={{ stat: "Solar leads", description: "Solar PV is now the dominant source of new generating capacity" }}
+          dataTable={{
+            caption: "Capacity additions and retirements by fuel type in GW",
+            headers: ["Year", "Gas Add", "Wind Add", "Solar Add", "Coal Ret", "Gas Ret", "Other Add"],
+            rows: capacity.data.map((d) => [d.year, d.additions.naturalGas, d.additions.wind, d.additions.solar, d.retirements.coal, d.retirements.naturalGas, d.additions.other]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -158,10 +176,18 @@ export default function GenerationMixPage() {
 
         {/* G3: Regional Mix */}
         <ChartContainer
+          staggerIndex={2}
           id="regional-mix"
           title="Regional Generation Mix Comparison"
           source={regional.source}
           chartAriaLabel="100 percent stacked horizontal bar chart comparing the electricity generation mix across 9 U.S. regions, showing each source as a percentage of total regional generation."
+          description="The Pacific Northwest generates over 50% from hydro. SPP gets 36% from wind. New England relies on 50%+ natural gas. MISO still generates 30% from coal. California leads in solar share. Regional mixes vary by more than 5x across fuel sources."
+          keyFinding={{ stat: "5x variation", description: "Regional generation mixes range from hydro-dominant to coal-heavy" }}
+          dataTable={{
+            caption: "Regional electricity generation mix as percentage of total",
+            headers: ["Region", "Coal (%)", "Gas (%)", "Nuclear (%)", "Wind (%)", "Solar (%)", "Hydro (%)", "Other (%)"],
+            rows: regional.data.map((d) => [d.region, d.coal, d.naturalGas, d.nuclear, d.wind, d.solar, d.hydro, d.other]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>

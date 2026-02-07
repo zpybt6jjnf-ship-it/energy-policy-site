@@ -40,12 +40,12 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   const d = entry.payload;
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-md">
-      <p className="mb-2 text-sm font-semibold text-gray-900">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-2 text-sm font-semibold text-slate-200">{label}</p>
       <p className="text-sm" style={{ color: CHART_COLORS.primary }}>
         Median: {formatWPerSqm(d.wattsPerSqMeter)}
       </p>
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-slate-400">
         Range: {formatWPerSqm(d.rangeMin)} – {formatWPerSqm(d.rangeMax)}
       </p>
     </div>
@@ -107,6 +107,13 @@ export default function PowerDensityChart({ data }: PowerDensityChartProps) {
         >
           <ErrorBar
             dataKey="errorHigh"
+            direction="x"
+            width={4}
+            stroke={CHART_COLORS.neutral}
+            strokeWidth={1.5}
+          />
+          <ErrorBar
+            dataKey="errorLow"
             direction="x"
             width={4}
             stroke={CHART_COLORS.neutral}

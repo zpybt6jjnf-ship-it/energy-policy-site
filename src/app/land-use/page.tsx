@@ -5,8 +5,10 @@ import { CATEGORY_META } from "@/lib/constants";
 import ChartContainer from "@/components/charts/ChartContainer";
 import AnalysisBlock from "@/components/charts/AnalysisBlock";
 import MethodologyNote from "@/components/charts/MethodologyNote";
-import CumulativeLandChart from "@/components/charts/land-use/CumulativeLandChart";
-import PowerDensityChart from "@/components/charts/land-use/PowerDensityChart";
+import dynamic from "next/dynamic";
+
+const CumulativeLandChart = dynamic(() => import("@/components/charts/land-use/CumulativeLandChart"), { ssr: false });
+const PowerDensityChart = dynamic(() => import("@/components/charts/land-use/PowerDensityChart"), { ssr: false });
 import type {
   DataEnvelope,
   CumulativeLandPoint,
@@ -27,10 +29,17 @@ export default function LandUsePage() {
       <div className="space-y-16">
         {/* L2: Cumulative Land Committed */}
         <ChartContainer
+          staggerIndex={0}
           id="cumulative-land"
           title="Cumulative Land Committed to Energy Infrastructure"
           source={cumulativeLand.source}
           chartAriaLabel="Stacked area chart showing cumulative land committed to energy infrastructure by source from 2000 to 2024, measured in thousand acres."
+          description="Total land committed to energy infrastructure has grown from about 8 million acres in 2000 to over 14 million acres in 2024. Wind and solar leases account for most of the growth. Hydro reservoirs remain the single largest land use. Wind land allows agricultural co-use."
+          dataTable={{
+            caption: "Cumulative land committed to energy infrastructure by source in thousand acres",
+            headers: ["Year", "Solar", "Wind", "Nuclear", "Gas", "Coal", "Hydro"],
+            rows: cumulativeLand.data.map((d) => [d.year, d.solar, d.wind, d.nuclear, d.naturalGas, d.coal, d.hydro]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -89,10 +98,17 @@ export default function LandUsePage() {
 
         {/* L3: Power Density */}
         <ChartContainer
+          staggerIndex={1}
           id="power-density"
           title="Power Density by Generation Technology"
           source={powerDensity.source}
           chartAriaLabel="Horizontal bar chart comparing power density in watts per square meter across eight generation technologies, with error bars showing the range of estimates."
+          description="Nuclear has the highest power density at roughly 240 W/m². Natural gas combined cycle is about 180 W/m². Coal is around 120 W/m². Solar is approximately 5-10 W/m² and wind about 1-3 W/m² using total lease area. Wide ranges reflect site-specific variation."
+          dataTable={{
+            caption: "Power density by generation technology in watts per square meter",
+            headers: ["Technology", "Median (W/m²)", "Min (W/m²)", "Max (W/m²)"],
+            rows: powerDensity.data.map((d) => [d.technology, d.wattsPerSqMeter, d.rangeMin, d.rangeMax]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>

@@ -7,9 +7,11 @@ import ChartContainer from "@/components/charts/ChartContainer";
 import AnalysisBlock from "@/components/charts/AnalysisBlock";
 import MethodologyNote from "@/components/charts/MethodologyNote";
 import Toggle from "@/components/ui/Toggle";
-import RetailPriceChart from "@/components/charts/affordability/RetailPriceChart";
-import StatePriceChart from "@/components/charts/affordability/StatePriceChart";
-import HouseholdSpendingChart from "@/components/charts/affordability/HouseholdSpendingChart";
+import dynamic from "next/dynamic";
+
+const RetailPriceChart = dynamic(() => import("@/components/charts/affordability/RetailPriceChart"), { ssr: false });
+const StatePriceChart = dynamic(() => import("@/components/charts/affordability/StatePriceChart"), { ssr: false });
+const HouseholdSpendingChart = dynamic(() => import("@/components/charts/affordability/HouseholdSpendingChart"), { ssr: false });
 import type {
   DataEnvelope,
   RetailPricePoint,
@@ -43,11 +45,18 @@ export default function AffordabilityPage() {
       <div className="space-y-16">
         {/* A1: Retail Prices */}
         <ChartContainer
+          staggerIndex={0}
           id="retail-prices"
           title="Retail Electricity Price Trends by Sector"
           source={retail.source}
           chartAriaLabel="Multi-line chart showing average retail electricity prices for residential, commercial, and industrial sectors from 2001 to 2024, with toggle for nominal versus inflation-adjusted dollars."
+          description="Residential rates have risen from about 9 cents per kWh in 2001 to over 16 cents in 2024. Commercial rates follow a similar trajectory. Industrial rates remain lowest at roughly 8 cents. When adjusted for inflation, real price increases are more modest."
           keyFinding={{ stat: "13.1¢/kWh", description: "National average retail electricity price, all sectors, 2024" }}
+          dataTable={{
+            caption: "Average retail electricity prices by sector in cents per kWh",
+            headers: ["Year", "Residential (¢)", "Commercial (¢)", "Industrial (¢)", "All Sectors (¢)"],
+            rows: retail.data.map((d) => [d.year, d.residential, d.commercial, d.industrial, d.allSectors]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -111,11 +120,18 @@ export default function AffordabilityPage() {
 
         {/* A2: State Prices */}
         <ChartContainer
+          staggerIndex={1}
           id="state-prices"
           title="State-Level Electricity Price Comparison"
           source={states.source}
           chartAriaLabel="Horizontal bar chart showing average electricity prices for all 50 states and DC, sorted from highest to lowest, with a reference line at the national average."
+          description="Hawaii has the highest electricity prices at over 30 cents per kWh. The lowest prices are in states like Louisiana and Washington around 10 cents. The national average is approximately 13 cents per kWh."
           keyFinding={{ stat: "3:1 ratio", description: "Price variation across U.S. states, from lowest to highest" }}
+          dataTable={{
+            caption: "State-level average electricity prices compared to national average",
+            headers: ["State", "Price (¢/kWh)", "Nat'l Avg (¢/kWh)"],
+            rows: states.data.map((d) => [d.state, d.price, d.nationalAverage]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -162,11 +178,18 @@ export default function AffordabilityPage() {
 
         {/* A3: Household Spending */}
         <ChartContainer
+          staggerIndex={2}
           id="household-spending"
           title="Electricity as Share of Household Spending"
           source={spending.source}
           chartAriaLabel="Line chart showing electricity expenditure as a percentage of total household spending from 2003 to 2023."
+          description="Electricity spending as a share of household expenditure has remained relatively stable between 1.4% and 1.9% over two decades, with modest fluctuations tied to fuel price swings and weather patterns."
           keyFinding={{ stat: "~1.6%", description: "Average share of household spending on electricity" }}
+          dataTable={{
+            caption: "Electricity as share of household spending with CPI indices",
+            headers: ["Year", "Elec. Share (%)", "CPI Electricity", "CPI All Items"],
+            rows: spending.data.map((d) => [d.year, d.electricityShare, d.cpiElectricity, d.cpiAllItems]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>

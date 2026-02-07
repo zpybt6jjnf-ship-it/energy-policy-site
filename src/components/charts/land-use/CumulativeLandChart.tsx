@@ -11,7 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import type { CumulativeLandPoint } from "@/lib/data/types";
-import { ENERGY_COLORS } from "@/lib/charts/colors";
+import { ENERGY_COLORS, CHART_COLORS } from "@/lib/charts/colors";
 import { formatThousandAcres } from "@/lib/charts/formatters";
 
 interface CumulativeLandChartProps {
@@ -46,8 +46,8 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   const total = payload.reduce((sum, entry) => sum + entry.value, 0);
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-md">
-      <p className="mb-2 text-sm font-semibold text-gray-900">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-2 text-sm font-semibold text-slate-200">{label}</p>
       {payload.map((entry) => (
         <p
           key={entry.dataKey}
@@ -57,7 +57,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
           {entry.name}: {formatThousandAcres(entry.value)}
         </p>
       ))}
-      <p className="mt-2 border-t border-gray-200 pt-2 text-sm font-semibold text-gray-900">
+      <p className="mt-2 border-t border-white/10 pt-2 text-sm font-semibold text-slate-200">
         Total: {formatThousandAcres(total)}
       </p>
     </div>
@@ -81,7 +81,7 @@ export default function CumulativeLandChart({
         data={data}
         margin={{ top: 10, right: 20, left: 10, bottom: 10 }}
       >
-        <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+        <CartesianGrid strokeDasharray="3 3" stroke={CHART_COLORS.grid} />
         <XAxis
           dataKey="year"
           tick={{ fontSize: 12 }}
@@ -94,7 +94,7 @@ export default function CumulativeLandChart({
             value: "Land (thousand acres)",
             angle: -90,
             position: "insideLeft",
-            style: { fontSize: 12, fill: "#6b7280" },
+            style: { fontSize: 12, fill: CHART_COLORS.neutral },
           }}
         />
         <Tooltip content={<CustomTooltip />} />

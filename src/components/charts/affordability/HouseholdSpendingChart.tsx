@@ -29,18 +29,15 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   const point = payload[0].payload;
 
   return (
-    <div
-      className="rounded-md border bg-white px-3 py-2 text-sm shadow-md"
-      style={{ borderColor: CHART_COLORS.grid }}
-    >
-      <p className="mb-1 font-semibold">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 text-sm shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-1 font-semibold text-slate-200">{label}</p>
       <p style={{ color: CHART_COLORS.primary }}>
         Electricity share: {formatPercent(point.electricityShare)}
       </p>
-      <p className="mt-1 text-muted">
+      <p className="mt-1 text-slate-400">
         CPI Electricity: {point.cpiElectricity.toFixed(1)}
       </p>
-      <p className="text-muted">
+      <p className="text-slate-400">
         CPI All Items: {point.cpiAllItems.toFixed(1)}
       </p>
     </div>
@@ -52,9 +49,9 @@ export default function HouseholdSpendingChart({
 }: HouseholdSpendingChartProps) {
   if (!data || data.length === 0) {
     return (
-      <p className="py-10 text-center text-sm text-muted">
+      <div className="flex h-[500px] items-center justify-center text-sm text-gray-500">
         No household spending data available.
-      </p>
+      </div>
     );
   }
 

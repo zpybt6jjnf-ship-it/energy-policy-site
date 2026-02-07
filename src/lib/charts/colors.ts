@@ -16,15 +16,17 @@ export const ENERGY_COLORS = {
 } as const;
 
 export const CHART_COLORS = {
-  primary: "#0D7377",
-  secondary: "#14919B",
-  tertiary: "#D97706",
-  positive: "#16a34a",
-  negative: "#dc2626",
-  neutral: "#6b7280",
-  grid: "#e2e8f0",
-  reference: "#DC2626",
-  background: "#ffffff",
+  primary: "#34D399",
+  secondary: "#22D3EE",
+  tertiary: "#FBBF24",
+  positive: "#34D399",
+  negative: "#FB7185",
+  neutral: "#94A3B8",
+  grid: "#334155",
+  reference: "#64748B",
+  background: "#111827",
+  tooltipBg: "#1E293B",
+  tooltipBorder: "#334155",
 } as const;
 
 /** Ordered palette for generic multi-series charts */
@@ -45,7 +47,7 @@ export const SECTOR_COLORS = {
   commercial: "#88CCEE",
   industrial: "#44AA99",
   transportation: "#CC6677",
-  allSectors: "#0D7377",
+  allSectors: "#34D399",
 } as const;
 
 /** Cause colors for disturbance events */

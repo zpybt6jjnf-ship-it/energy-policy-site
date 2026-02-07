@@ -96,12 +96,12 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   const totalRetirements = retirements.reduce((sum, e) => sum + e.value, 0);
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-md">
-      <p className="mb-2 text-sm font-semibold text-gray-900">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-2 text-sm font-semibold text-slate-200">{label}</p>
 
       {additions.length > 0 && (
         <>
-          <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Additions
           </p>
           {additions.map((entry) => (
@@ -113,7 +113,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
               {entry.name}: {formatGw(entry.value)}
             </p>
           ))}
-          <p className="text-sm font-semibold text-gray-700">
+          <p className="text-sm font-semibold text-slate-300">
             Subtotal: {formatGw(totalAdditions)}
           </p>
         </>
@@ -121,7 +121,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
 
       {retirements.length > 0 && (
         <>
-          <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-gray-500">
+          <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
             Retirements
           </p>
           {retirements.map((entry) => (
@@ -133,13 +133,13 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
               {entry.name}: {formatGw(Math.abs(entry.value))}
             </p>
           ))}
-          <p className="text-sm font-semibold text-gray-700">
+          <p className="text-sm font-semibold text-slate-300">
             Subtotal: {formatGw(Math.abs(totalRetirements))}
           </p>
         </>
       )}
 
-      <p className="mt-2 border-t border-gray-200 pt-2 text-sm font-semibold text-gray-900">
+      <p className="mt-2 border-t border-white/10 pt-2 text-sm font-semibold text-slate-200">
         Net: {formatGw(totalAdditions + totalRetirements)}
       </p>
     </div>

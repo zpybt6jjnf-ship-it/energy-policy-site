@@ -10,7 +10,7 @@ const DATA_SOURCES = [
 ] as const;
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const year = 2026;
 
   return (
     <footer className="mt-auto border-t border-border bg-card-bg no-print">
@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Left column: Site name + description */}
           <div>
-            <p className="text-lg font-semibold text-foreground">{SITE_TITLE}</p>
+            <p className="font-[family-name:var(--font-display)] text-lg font-semibold text-foreground">{SITE_TITLE}</p>
             <p className="mt-2 text-sm text-muted">
               Nonpartisan, data-driven analysis of U.S. energy policy using
               government primary-source data. No advocacy, no agenda.
@@ -30,12 +30,12 @@ export default function Footer() {
             <p className="text-sm font-semibold uppercase tracking-wide text-foreground">
               Categories
             </p>
-            <ul className="mt-2 space-y-1">
+            <ul className="mt-2 space-y-0.5">
               {CATEGORY_ORDER.map((slug) => (
                 <li key={slug}>
                   <Link
                     href={`/${slug}`}
-                    className="text-sm text-muted hover:text-foreground transition-colors"
+                    className="text-sm text-muted hover:text-foreground transition-colors inline-block py-1.5"
                   >
                     {CATEGORY_META[slug].title}
                   </Link>
@@ -49,11 +49,11 @@ export default function Footer() {
             <p className="text-sm font-semibold uppercase tracking-wide text-foreground">
               Resources
             </p>
-            <ul className="mt-2 space-y-1">
+            <ul className="mt-2 space-y-0.5">
               <li>
                 <Link
                   href="/methodology"
-                  className="text-sm text-muted hover:text-foreground transition-colors"
+                  className="text-sm text-muted hover:text-foreground transition-colors inline-block py-1.5"
                 >
                   Methodology
                 </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
                     href={src.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-muted hover:text-foreground transition-colors"
+                    className="text-sm text-muted hover:text-foreground transition-colors inline-block py-1.5"
                   >
                     {src.label}
                   </a>

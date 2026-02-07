@@ -7,9 +7,11 @@ import ChartContainer from "@/components/charts/ChartContainer";
 import AnalysisBlock from "@/components/charts/AnalysisBlock";
 import MethodologyNote from "@/components/charts/MethodologyNote";
 import Toggle from "@/components/ui/Toggle";
-import SaidiSaifiChart from "@/components/charts/reliability/SaidiSaifiChart";
-import ReserveMarginsChart from "@/components/charts/reliability/ReserveMarginsChart";
-import DisturbanceEventsChart from "@/components/charts/reliability/DisturbanceEventsChart";
+import dynamic from "next/dynamic";
+
+const SaidiSaifiChart = dynamic(() => import("@/components/charts/reliability/SaidiSaifiChart"), { ssr: false });
+const ReserveMarginsChart = dynamic(() => import("@/components/charts/reliability/ReserveMarginsChart"), { ssr: false });
+const DisturbanceEventsChart = dynamic(() => import("@/components/charts/reliability/DisturbanceEventsChart"), { ssr: false });
 import type {
   DataEnvelope,
   SaidiSaifiPoint,
@@ -43,11 +45,18 @@ export default function ReliabilityPage() {
       <div className="space-y-16">
         {/* R1: SAIDI/SAIFI */}
         <ChartContainer
+          staggerIndex={0}
           id="saidi-saifi"
           title="Distribution System Reliability (SAIDI/SAIFI)"
           source={saidi.source}
           chartAriaLabel="Line chart showing System Average Interruption Duration Index and System Average Interruption Frequency Index from 2013 to 2024, with toggle for including or excluding major event days."
+          description="SAIDI has trended upward from roughly 400 minutes per customer in 2013 to over 550 minutes including major event days. Excluding major events, baseline SAIDI has risen modestly from about 110 to 140 minutes. SAIFI follows a similar pattern with roughly 1.3 interruptions per customer per year."
           keyFinding={{ stat: "550 min", description: "Average annual outage duration including major events" }}
+          dataTable={{
+            caption: "SAIDI and SAIFI values by year with and without major event days",
+            headers: ["Year", "SAIDI (w/ MED)", "SAIDI (w/o MED)", "SAIFI (w/ MED)", "SAIFI (w/o MED)"],
+            rows: saidi.data.map((d) => [d.year, d.saidiWithMed, d.saidiWithoutMed, d.saifiWithMed, d.saifiWithoutMed]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -113,11 +122,23 @@ export default function ReliabilityPage() {
 
         {/* R2: Reserve Margins */}
         <ChartContainer
+          staggerIndex={1}
           id="reserve-margins"
           title="Planning Reserve Margins by Region"
           source={reserves.source}
           chartAriaLabel="Grouped bar chart showing current and forecast planning reserve margins for NERC assessment areas, with reference lines indicating minimum required levels."
+          description="Reserve margins vary significantly by NERC region. Several regions including MISO and ERCOT show projected margins declining to near or below reference levels by 2026-2028, while others like PJM maintain adequate margins."
           keyFinding={{ stat: "Declining", description: "Multiple regions face tightening reserve margins through 2028" }}
+          dataTable={{
+            caption: "Planning reserve margins by NERC region with forecast through 2029",
+            headers: ["Region", "Current (%)", "Ref. Level (%)", "2025 (%)", "2026 (%)", "2027 (%)", "2028 (%)", "2029 (%)"],
+            rows: reserves.data.map((d) => [
+              d.region,
+              d.currentMargin,
+              d.referenceLevel,
+              ...d.forecastMargins.map((f) => f.margin),
+            ]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -170,11 +191,18 @@ export default function ReliabilityPage() {
 
         {/* R3: Disturbance Events */}
         <ChartContainer
+          staggerIndex={2}
           id="disturbance-events"
           title="Major Electric Disturbance Events"
           source={disturbances.source}
           chartAriaLabel="Stacked bar chart showing the number of major electric disturbance events by cause category from 2000 to 2024."
+          description="Total major disturbance events have roughly tripled from about 75 per year in the early 2000s to over 200 per year by 2024. Weather-related events dominate and have grown the most. Cyber incidents have emerged as a growing category since 2013."
           keyFinding={{ stat: "3x increase", description: "Major disturbance events since 2000, driven by weather and cyber threats" }}
+          dataTable={{
+            caption: "Major electric disturbance events by cause category and year",
+            headers: ["Year", "Weather", "Equipment", "Cyber", "Physical", "Fuel Supply", "Other"],
+            rows: disturbances.data.map((d) => [d.year, d.weather, d.equipment, d.cyber, d.physical, d.fuelSupply, d.other]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>

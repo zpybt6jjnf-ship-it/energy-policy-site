@@ -1,31 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #FAFAFA;
-  --foreground: #1a1a2e;
-  --muted: #4a5568;
-  --border: #e2e8f0;
-  --card-bg: #ffffff;
-  --accent: #0D7377;
-  --accent-light: #CCFBF1;
+@theme inline {
+  --color-midnight: #0B1120;
+  --color-surface: #111827;
+  --color-surface-raised: #1E293B;
+  --color-energy-green: #34D399;
+  --color-energy-cyan: #22D3EE;
+  --color-energy-amber: #FBBF24;
+  --color-energy-rose: #FB7185;
+  --color-energy-violet: #A78BFA;
+  --color-energy-sky: #38BDF8;
+  --color-border-subtle: #334155;
+  --color-text-primary: #F1F5F9;
+  --color-text-muted: #94A3B8;
+  --font-sans: 'Inter', 'Inter Variable', system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
+  --color-background: #0B1120;
+  --color-foreground: #F1F5F9;
+  --color-muted: #94A3B8;
+  --color-border: #334155;
+  --color-card-bg: #111827;
+  --color-card-raised: #1E293B;
+  --color-accent: #34D399;
+  --color-accent-light: rgba(52, 211, 153, 0.1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --color-card-bg: var(--card-bg);
-  --color-accent: var(--accent);
-  --color-accent-light: var(--accent-light);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: #0B1120;
+  --foreground: #F1F5F9;
+  --muted: #94A3B8;
+  --border: #334155;
+  --card-bg: #111827;
+  --card-raised: #1E293B;
+  --accent: #34D399;
+  --accent-muted: rgba(52, 211, 153, 0.1);
 }
 
 body {
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .skip-link {
@@ -55,6 +73,25 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .card-hover {
+    transition-duration: 0.01ms !important;
+  }
+  .card-hover:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  button:active:not(:disabled),
+  a[role="button"]:active {
+    transform: none !important;
+  }
+
+  .scroll-progress {
+    animation: none !important;
+    transform: scaleX(1) !important;
   }
 }
 
@@ -74,5 +111,74 @@ body {
 }
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Button press micro-interaction */
+button:active:not(:disabled),
+a[role="button"]:active {
+  transform: scale(0.97);
+  transition: transform 100ms ease;
+}
+
+/* Recharts tooltip fade-in */
+.recharts-tooltip-wrapper {
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+/* Focus-visible for accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent);
+  transform-origin: left;
+  animation: scroll-progress linear;
+  animation-timeline: scroll(root);
+  z-index: 100;
+}
+@keyframes scroll-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* Skeleton shimmer for loading placeholders */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.shimmer {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.04) 40%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.04) 60%,
+    transparent 100%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* Landscape mode on short screens: compact bottom tab bar */
+@media (orientation: landscape) and (max-height: 500px) {
+  .mobile-bottom-bar-list {
+    height: 2.75rem; /* h-11 = 44px */
+  }
+
+  .mobile-tab-label {
+    display: none;
+  }
+
+  .mobile-bottom-spacer {
+    height: calc(44px + env(safe-area-inset-bottom, 0px)) !important;
+  }
 }

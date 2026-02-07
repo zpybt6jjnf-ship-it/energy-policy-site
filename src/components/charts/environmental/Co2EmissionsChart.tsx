@@ -39,8 +39,8 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   const perCapitaEntry = payload.find((e) => e.dataKey === "perCapitaTons");
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-md">
-      <p className="mb-2 text-sm font-semibold text-gray-900">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-2 text-sm font-semibold text-slate-200">{label}</p>
       {totalEntry && (
         <p className="text-sm" style={{ color: totalEntry.color }}>
           Total Emissions: {formatMmt(totalEntry.value)}

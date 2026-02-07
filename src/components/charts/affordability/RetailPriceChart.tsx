@@ -43,11 +43,8 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   if (!active || !payload || payload.length === 0) return null;
 
   return (
-    <div
-      className="rounded-md border bg-white px-3 py-2 text-sm shadow-md"
-      style={{ borderColor: CHART_COLORS.grid }}
-    >
-      <p className="mb-1 font-semibold">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 text-sm shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-1 font-semibold text-slate-200">{label}</p>
       {payload.map((entry) => (
         <p key={entry.dataKey} style={{ color: entry.color }}>
           {entry.name}: {formatCentsPerKwh(entry.value)}
@@ -63,9 +60,9 @@ export default function RetailPriceChart({
 }: RetailPriceChartProps) {
   if (!data || data.length === 0) {
     return (
-      <p className="py-10 text-center text-sm text-muted">
+      <div className="flex h-[500px] items-center justify-center text-sm text-gray-500">
         No retail price data available.
-      </p>
+      </div>
     );
   }
 

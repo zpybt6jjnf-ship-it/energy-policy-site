@@ -12,7 +12,7 @@ import {
 } from "recharts";
 import type { SaidiSaifiPoint } from "@/lib/data/types";
 import { CHART_COLORS } from "@/lib/charts/colors";
-import { formatMinutes, formatCount } from "@/lib/charts/formatters";
+import { formatMinutes } from "@/lib/charts/formatters";
 
 interface SaidiSaifiChartProps {
   data: SaidiSaifiPoint[];
@@ -36,8 +36,8 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   if (!active || !payload || payload.length === 0) return null;
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-md">
-      <p className="mb-2 text-sm font-semibold text-gray-900">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-2 text-sm font-semibold text-slate-200">{label}</p>
       {payload.map((entry) => {
         const isSaidi = entry.dataKey.startsWith("saidi");
         const formatted = isSaidi

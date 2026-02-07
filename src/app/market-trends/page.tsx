@@ -5,9 +5,11 @@ import { CATEGORY_META } from "@/lib/constants";
 import ChartContainer from "@/components/charts/ChartContainer";
 import AnalysisBlock from "@/components/charts/AnalysisBlock";
 import MethodologyNote from "@/components/charts/MethodologyNote";
-import GasElectricityChart from "@/components/charts/market-trends/GasElectricityChart";
-import LcoeChart from "@/components/charts/market-trends/LcoeChart";
-import DemandGrowthChart from "@/components/charts/market-trends/DemandGrowthChart";
+import dynamic from "next/dynamic";
+
+const GasElectricityChart = dynamic(() => import("@/components/charts/market-trends/GasElectricityChart"), { ssr: false });
+const LcoeChart = dynamic(() => import("@/components/charts/market-trends/LcoeChart"), { ssr: false });
+const DemandGrowthChart = dynamic(() => import("@/components/charts/market-trends/DemandGrowthChart"), { ssr: false });
 import type {
   DataEnvelope,
   GasElectricityCorrelationPoint,
@@ -39,10 +41,18 @@ export default function MarketTrendsPage() {
       <div className="space-y-16">
         {/* M1: Gas-Electricity Correlation */}
         <ChartContainer
+          staggerIndex={0}
           id="gas-electricity-correlation"
           title="Natural Gas & Electricity Price Correlation"
           source={gas.source}
           chartAriaLabel="Dual-axis line chart showing Henry Hub natural gas prices and average retail electricity prices from 2001 to 2024."
+          description="Henry Hub gas prices spiked to $6-9/MMBtu in 2005-2008, fell to $2-4 during the shale era, spiked again to $6.45 in 2022, and returned to $2.28 in 2024. Electricity prices track gas with a lag due to contracts and rate-setting."
+          keyFinding={{ stat: "$2.28", description: "Henry Hub gas price (2024), driving electricity market dynamics" }}
+          dataTable={{
+            caption: "Natural gas and retail electricity prices by year",
+            headers: ["Year", "Henry Hub ($/MMBtu)", "Retail Elec. (¢/kWh)"],
+            rows: gas.data.map((d) => [d.year, d.henryHub, d.retailElectricity]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -94,10 +104,18 @@ export default function MarketTrendsPage() {
 
         {/* M2: LCOE */}
         <ChartContainer
+          staggerIndex={1}
           id="lcoe"
           title="Levelized Cost of Energy by Technology"
           source={lcoe.source}
           chartAriaLabel="Grouped bar chart comparing the levelized cost of electricity for different generation technologies across three time periods: 2015, 2020, and current estimates."
+          description="Solar PV LCOE has fallen roughly 65% since 2015. Onshore wind has declined about 50%. Battery storage dropped from $140/MWh to about $62/MWh. Natural gas combined cycle remains competitive but is now more expensive than unsubsidized solar and wind on a pure LCOE basis."
+          keyFinding={{ stat: "-65%", description: "Solar PV levelized cost decline since 2015" }}
+          dataTable={{
+            caption: "Levelized cost of energy by technology in $/MWh",
+            headers: ["Technology", "2015 ($/MWh)", "2020 ($/MWh)", "Current ($/MWh)"],
+            rows: lcoe.data.map((d) => [d.technology, d.vintage2015 ?? "—", d.vintage2020 ?? "—", d.vintageCurrent]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>
@@ -156,10 +174,18 @@ export default function MarketTrendsPage() {
 
         {/* M3: Demand Growth */}
         <ChartContainer
+          staggerIndex={2}
           id="demand-growth"
           title="Electricity Demand Growth Drivers"
           source={demand.source}
           chartAriaLabel="Stacked area chart showing historical electricity demand from 2010 to 2023 and projected demand growth from 2024 to 2030 broken down by driver: data centers, electric vehicles, building electrification, and manufacturing onshoring."
+          description="U.S. electricity demand was nearly flat from 2010 to 2023 at around 4,000 TWh. Projections show potential growth to 4,500+ TWh by 2030, driven primarily by data centers and AI workloads, followed by EV adoption and building electrification."
+          keyFinding={{ stat: "AI + EVs", description: "Converging demand drivers may end two decades of flat electricity consumption" }}
+          dataTable={{
+            caption: "Electricity demand growth by driver in TWh",
+            headers: ["Year", "Baseline (TWh)", "Data Centers", "EVs", "Electrification", "Onshoring"],
+            rows: demand.data.map((d) => [d.year, d.baselineDemand, d.dataCenters ?? "—", d.evs ?? "—", d.electrification ?? "—", d.onshoring ?? "—"]),
+          }}
           analysisContent={
             <AnalysisBlock>
               <p>

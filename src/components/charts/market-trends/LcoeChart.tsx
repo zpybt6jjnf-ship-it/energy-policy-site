@@ -46,8 +46,8 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   if (!entry) return null;
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-md">
-      <p className="mb-2 text-sm font-semibold text-gray-900">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-2 text-sm font-semibold text-slate-200">{label}</p>
       {entry.vintage2015 != null && (
         <p className="text-sm" style={{ color: CHART_COLORS.neutral }}>
           2015: {formatDollarsPerMwh(entry.vintage2015)}

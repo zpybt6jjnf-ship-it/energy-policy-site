@@ -57,8 +57,8 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   const total = payload.reduce((sum, entry) => sum + entry.value, 0);
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white px-4 py-3 shadow-md">
-      <p className="mb-2 text-sm font-semibold text-gray-900">{label}</p>
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-2 text-sm font-semibold text-slate-200">{label}</p>
       {payload.map((entry) => (
         <p
           key={entry.dataKey}
@@ -68,7 +68,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
           {entry.name}: {formatCount(entry.value)}
         </p>
       ))}
-      <p className="mt-1 border-t border-gray-200 pt-1 text-sm font-semibold text-gray-900">
+      <p className="mt-1 border-t border-white/10 pt-1 text-sm font-semibold text-slate-200">
         Total: {formatCount(total)}
       </p>
     </div>

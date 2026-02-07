@@ -1,7 +1,7 @@
 import { CHART_COLORS } from "./colors";
 
 export const CHART_THEME = {
-  fontFamily: "var(--font-geist-sans), system-ui, sans-serif",
+  fontFamily: "'Inter', 'Inter Variable', system-ui, -apple-system, sans-serif",
   fontSize: {
     title: 16,
     axis: 12,
@@ -19,11 +19,13 @@ export const CHART_THEME = {
   grid: {
     strokeDasharray: "3 3",
     stroke: CHART_COLORS.grid,
+    strokeOpacity: 0.5,
   },
   tooltip: {
-    backgroundColor: "#ffffff",
-    borderColor: CHART_COLORS.grid,
-    borderRadius: 6,
+    backgroundColor: CHART_COLORS.tooltipBg,
+    borderColor: CHART_COLORS.tooltipBorder,
+    borderRadius: 12,
     padding: 12,
+    boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
   },
 } as const;

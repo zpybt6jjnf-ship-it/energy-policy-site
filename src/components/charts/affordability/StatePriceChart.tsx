@@ -29,13 +29,10 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
   const entry = payload[0].payload;
 
   return (
-    <div
-      className="rounded-md border bg-white px-3 py-2 text-sm shadow-md"
-      style={{ borderColor: CHART_COLORS.grid }}
-    >
-      <p className="mb-1 font-semibold">{entry.state}</p>
-      <p>Price: {formatCentsPerKwh(entry.price)}</p>
-      <p className="text-muted">
+    <div className="rounded-lg border border-white/10 bg-[#0f1729]/95 p-3 text-sm shadow-xl shadow-black/20 backdrop-blur-md">
+      <p className="mb-1 font-semibold text-slate-200">{entry.state}</p>
+      <p className="text-slate-200">Price: {formatCentsPerKwh(entry.price)}</p>
+      <p className="text-slate-400">
         National avg: {formatCentsPerKwh(entry.nationalAverage)}
       </p>
     </div>
@@ -45,9 +42,9 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
 export default function StatePriceChart({ data }: StatePriceChartProps) {
   if (!data || data.length === 0) {
     return (
-      <p className="py-10 text-center text-sm text-muted">
+      <div className="flex h-[500px] items-center justify-center text-sm text-gray-500">
         No state price data available.
-      </p>
+      </div>
     );
   }
 
